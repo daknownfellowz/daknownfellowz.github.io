@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+
+        canvas {
+            background-color: #bdc800;
+            margin-left: 65px;
+            margin-top: 37px;
+            border: #bdc800;
+        }
+
+        body {
+            margin: 0 auto;
+            padding : 0;
+            background-color: black;
+        }
+
+        .box1 {
+            position: relative;
+            margin: 0px 0px 0px 0px;
+            padding: 0px 0;
+            height: 800px;
+            background-image: url('unnamed.jpg');
+            background-repeat: no-repeat;
+        }
+
+
+        #downlink {
+            position: absolute;
+            top: 704px;
+            left: 177px;
+            width: 130px;
+            height: 77px;
+            background-color: transparent;
+            border: none;
+        }
+        #rightlink {
+            position: absolute;
+            top: 602px;
+            left: 338px;
+            width: 130px;
+            height: 77px;
+            background-color: transparent;
+            border: none;
+        }
+        #uplink {
+            position: absolute;
+            top: 502px;
+            left: 176px;
+            width: 130px;
+            height: 77px;
+            background-color: transparent;
+            border: none;
+        }
+        #leftlink {
+            position: absolute;
+            top: 602px;
+            left: 18px;
+            width: 130px;
+            height: 77px;
+            background-color: transparent;
+            border: none;
+        }
+
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+    <script>
+
+    $(document).ready(function () {
+
+        // canvas stuff
+        var drawCanvas = $("#drawCanvas")[0];
+        var context = drawCanvas.getContext("2d");
+        var width = $("#drawCanvas").width();
+        var height = $("#drawCanvas").height();
+
+        // snake stuff
+        var cell_width = 5; //15;
+        var defaultRun;
+        var snake_food;
+        var userscore;
+        var mySnakeArray;
+
+        function start() {
+
+            defaultRun = "right";
+            createSnake();
+            createFood();
+            userscore = 0;
+
+            if (typeof game_loop != "undefined") clearInterval(game_loop);
+            game_loop = setInterval(paintSnake, 40);
+            // game_loop = setInterval(paintSnake, 70);  // 70 ms - To move our snake we can use a timer that will trigger the paintSnake method every 70ms
+        }
+
+        start();
+
+        function createSnake() {
+
+            var snakeSize = 16;
+            mySnakeArray = [];
+
+            for (var m = 0; m < snakeSize - 1; m++) {
+                mySnakeArray.push({ x: 0, y: 20 });
+            }
+        }
+
+        function createFood() {
+            snake_food = {
+                x: Math.round(Math.random() * (width - cell_width) / cell_width),
+                y: Math.round(Math.random() * (height - cell_width) / cell_width),
+            };
+        }
+
+        function paintSnake() {
+
+            //KOHTAAN STEP 6 JÄÄTIIN ESIMERKISSÄ!
+            //       http://www.c-sharpcorner.com/UploadFile/b5be7f/create-a-classic-snake-game-using-html5-canvas-in-10-simple/
+
+            context.fillStyle = "#bdc800";   // background
+            context.fillRect(0, 0, width, height);
+            context.strokeStyle = "0000ff";
+            context.strokeRect(0, 0, width, height);
+
+            var pop_x = mySnakeArray[0].x;
+            var pop_y = mySnakeArray[0].y;
+
+            if (defaultRun == "right") pop_x++;
+            else if (defaultRun == "left") pop_x--;
+            else if (defaultRun == "down") pop_y++;
+            else if (defaultRun == "up") pop_y--;
+
+
+            if (pop_x == -1 || pop_x == width / cell_width || pop_y == -1 || pop_y == height / cell_width ||
+                    check_collision(pop_x, pop_y, mySnakeArray)) {
+
+                start();
+                return;
+            }
+
+            if (pop_x == snake_food.x && pop_y == snake_food.y) {
+
+                var snake_tail = { x: pop_x, y: pop_y };
+                userscore++;
+                createFood();    //It will create our snakes food.
+
+            } else {
+
+                var snake_tail = mySnakeArray.pop();
+                snake_tail.x = pop_x;
+                snake_tail.y = pop_y;
+            }
+
+            mySnakeArray.unshift(snake_tail);
+
+            for (var i = 0; i < mySnakeArray.length; i++) {
+                var k = mySnakeArray[i];
+                paintCell(k.x, k.y);
+            }
+
+
+            paintCell(snake_food.x, snake_food.y);
+
+            var score_text = "score: " + userscore;
+            context.fillText(score_text, width - 50, 20);
+        }
+
+        function paintCell(x, y) {
+
+            context.fillStyle = "#000000"; //"orange";
+            context.fillRect(x * cell_width, y * cell_width, cell_width, cell_width);
+            context.strokeStyle = "#000000"; // "red";
+            context.strokeRect(x * cell_width, y * cell_width, cell_width, cell_width);
+        }
+
+        function check_collision(x, y, array) {
+
+            for (var i = 0; i < array.length; i++) {
+                if (array[i].x == x && array[i].y == y)
+                    return true;
+            }
+            return false;
+        }
+
+
+
+        $("#downlink").click(function() {
+            if (defaultRun != "up") defaultRun = "down";
+        });
+        $("#rightlink").click(function() {
+            if (defaultRun != "left") defaultRun = "right";
+        });
+        $("#uplink").click(function() {
+            if (defaultRun != "down") defaultRun = "up";
+        });
+        $("#leftlink").click(function() {
+            if (defaultRun != "right") defaultRun = "left";
+        });
+
+
+        $(document).keydown(function (e) {
+
+            var keyInput = e.which;
+
+            if (keyInput == "40" && defaultRun != "up") defaultRun = "down";
+            else if (keyInput == "39" && defaultRun != "left") defaultRun = "right";
+            else if (keyInput == "38" && defaultRun != "down") defaultRun = "up";
+            else if (keyInput == "37" && defaultRun != "right") defaultRun = "left";
+        })
+    })
+
+    </script>
+</head>
+<body>
+  <form id="form1" runat="server">
+
+      <div class="box1"> <!-- onclick="gotoLeft();" -->
+          <a id="downlink" href="#"></a>
+          <a id="rightlink" href="#"></a>
+          <a id="uplink" href="#"></a>
+          <a id="leftlink" href="#"></a>
+
+         <!-- <p>The background of this box is an image.</p> -->
+          <canvas id="drawCanvas" width="350" height="230"></canvas>
+      </div>
+
+
+      <!--
+     <div>
+        <canvas id="drawCanvas" width="350" height="230" style="background-color: #bdc800; margin-left: 65px; margin-top: 37px"></canvas>
+     </div> -->
+   </form>
+</body>
+</html>
