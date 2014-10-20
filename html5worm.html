@@ -11,12 +11,39 @@
             margin-left: 65px;
             margin-top: 37px;
             border: #bdc800;
+            align-content: center;
+            text-align:center;
+        }
+
+        p {
+            font-family: Arial;
+            font-size: 12px;
+            color: white;
         }
 
         body {
             margin: 0 auto;
+            margin-left: 100px;
             padding : 0;
             background-color: black;
+            background: url("background.jpg") fixed no-repeat;
+            background-size: 100%;
+            background-position: center center;
+
+            -webkit-background-size: cover, cover;
+            -moz-background-size: cover, cover;
+            -o-background-size: cover, cover;
+            background-size: cover, cover;
+
+        }
+
+        .matopelimania {
+            position: absolute;
+            max-width: 600px;
+            float: right;
+            padding-left: 50px;
+            margin-top:  10px;
+            margin-left: 490px;
         }
 
         .box1 {
@@ -26,8 +53,8 @@
             height: 800px;
             background-image: url('unnamed.jpg');
             background-repeat: no-repeat;
+            /*align-content: center;*/
         }
-
 
         #downlink {
             position: absolute;
@@ -118,9 +145,6 @@
         }
 
         function paintSnake() {
-
-            //KOHTAAN STEP 6 JÄÄTIIN ESIMERKISSÄ!
-            //       http://www.c-sharpcorner.com/UploadFile/b5be7f/create-a-classic-snake-game-using-html5-canvas-in-10-simple/
 
             context.fillStyle = "#bdc800";   // background
             context.fillRect(0, 0, width, height);
@@ -219,21 +243,21 @@
 <body>
   <form id="form1" runat="server">
 
-      <div class="box1"> <!-- onclick="gotoLeft();" -->
+      <div class="box1">
           <a id="downlink" href="#"></a>
           <a id="rightlink" href="#"></a>
           <a id="uplink" href="#"></a>
           <a id="leftlink" href="#"></a>
 
-         <!-- <p>The background of this box is an image.</p> -->
           <canvas id="drawCanvas" width="350" height="230"></canvas>
+
+          <div class="matopelimania">
+              <img src="matopelimania.png">
+              <p>Nokia Matopeli forever. Lorem ipsum dolor sit amet, consectetur adipisci elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div>
       </div>
 
 
-      <!--
-     <div>
-        <canvas id="drawCanvas" width="350" height="230" style="background-color: #bdc800; margin-left: 65px; margin-top: 37px"></canvas>
-     </div> -->
    </form>
 </body>
 </html>
