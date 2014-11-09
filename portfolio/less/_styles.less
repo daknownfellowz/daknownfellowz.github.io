@@ -1,0 +1,232 @@
+@import "_bootstrap.less";
+@import "_variables.less";
+@import "_mixins.less";
+
+// basic styles
+* {
+     .box-sizing(border-box);
+}
+body {
+    font-family: @primaryFont;
+    font-size: @baseFontSize;
+    line-height: @lineHeight;
+}
+h1, h2, h3, h4, h5, h6 {
+    color: @secondaryColor;
+}
+hr {
+     border: 0;
+     height: 1px;
+     background-image: -webkit-linear-gradient(left, fade(@black, 0%), fade(@black, 15%), fade(@black, 0%)); 
+     background-image:    -moz-linear-gradient(left, fade(@black, 0%), fade(@black, 15%), fade(@black, 0%)); 
+     background-image:     -ms-linear-gradient(left, fade(@black, 0%), fade(@black, 15%), fade(@black, 0%)); 
+     background-image:      -o-linear-gradient(left, fade(@black, 0%), fade(@black, 15%), fade(@black, 0%));
+     background-image:          linear-gradient(left, fade(@black, 0%), fade(@black, 15%), fade(@black, 0%));
+     margin: (@baseLength * 4) 0;
+}
+
+// input and button styles
+.kudosplush {
+    input, textarea {
+        &:focus {
+            @borderColor: darken(@secondaryColor, 10%);
+            @inputShadow: inset 0 1px 1px fade(@black, 7%), 0 0 8px fade(@borderColor, 50%);
+            border-color: @borderColor;
+            .box-shadow(@inputShadow);
+        }
+    }
+    input {
+        .placeholder(darken(@white, 10%));    
+    }
+    .btn {
+         .buttonBackground(@secondaryColor, darken(@secondaryColor, 10%), @white, 0 1px 1px fade(@white, 75%));
+         .border-radius(@borderRadiusSmall);
+         .text-shadow(1px,1px,0,fade(@black, 30%)) ;
+    }
+    .btn-primary {
+         font-size: @baseFontSize * 1.2;
+         padding: (@baseLength * 2) (@baseLength * 4);
+         text-transform: uppercase;
+         .buttonBackground(@primaryColor, darken(@primaryColor, 10%), @white, 0 1px 1px rgba(255,255,255,.75));
+    }
+}
+
+// Header & Navbar
+.header {
+    background-color: darken(@white, 2%);
+    padding: (@baseLength * 2) 0;
+    .brand {
+        .ir;
+    	width: 188px;
+    	height: 100px;
+        padding: 0;
+        background: url('../img/plush-logo.png') no-repeat;
+     }
+    .navbar {
+        .navbar-inner {
+                @navShadow: inset 0 0 0 fade(@black, 0%), 0 0 0 fade(@black, 0%);
+                .box-shadow(@navShadow);
+                #gradient > .vertical(fade(@white,0%), fade(@white,0%));
+                border: 0;
+        }
+        .nav {
+            margin-top: @baseLength * 3;
+           li {
+                margin-left: @baseLength;
+            }
+            a {
+                .text-shadow(0,0,0,@white);
+                text-transform: uppercase;
+                color: @primaryColor;
+                padding: 0 (@baseLength * 1.5);
+                height: @baseLength * 4;
+                line-height: @baseLength * 4.3;
+                &:hover {
+                    .box-shadow(inset 0 0 0 fade(@black, 0%));
+                    .border-radius(@borderRadiusSmall);
+                    background-color: @primaryColor;
+                    color: @tertiaryColor;
+                }
+            }
+            .active {
+                 > a {
+                     .box-shadow(inset 0 0 0 fade(@black, 0%));
+                     .border-radius(@borderRadiusSmall);
+                     .text-shadow(0,0,0,fade(@white, 0%));
+                     background-color: @primaryColor;
+                     color: @tertiaryColor;
+                }
+            }
+        }
+    }
+}
+// Hero section
+.hero-unit {
+    background-color: inherit;
+	padding: (@baseLength * 3) 0;
+	color: @primaryColor;
+    margin-bottom: 0;
+    p {
+        font-size: @baseFontSize * 2.8;
+	    line-height: @lineHeight / 1.8;
+    }
+    .price {
+        font-weight: bold;
+	    color: @secondaryColor;
+    }
+}
+
+// Content
+.content {
+    h1 {
+        margin: (@baseLength * 4) 0 (@baseLength * 2);
+        small {
+            font-size: 0.75em;
+        }
+    }
+    .cta {
+        margin-top: @baseLength * 4;
+        .copy-text {
+            color: @secondaryColor;
+            font-size: @baseFontSize * 1.5;
+        }
+    }
+    .gallery {
+        figure {
+            margin-right: 0;
+        }
+    }
+    .testimonial {
+        font-size: @baseLength * 3;
+    	padding-bottom: @baseLength * 2;
+        color: lighten(@black, 50%);
+    	text-align: center;
+    }
+    .subscribe-form {
+    margin-bottom: @baseLength * 2;
+    text-align: center;
+        input {
+            width: @baseLength * 28;
+        }
+        input, button {
+            height: @baseLength * 5;
+            padding: @baseLength (@baseLength * 2);
+        	margin-bottom: 0;
+        }
+    }
+    .contact {
+        .contact-form {
+            input {
+                height: (@baseLength * 4);
+            }
+            textarea {
+                min-height: (@baseLength * 8);
+            }
+        }
+        .contact-form, .address {
+            padding: (@baseLength * 2) (@baseLength * 1.5);
+            margin-bottom: @baseLength * 2;
+        }
+        .address {
+            border-right: 1px solid darken(@white, 5%);
+        }
+    }
+}
+.footer {
+    color: lighten(@black, 70%);
+    background-color: darken(@white, 2%);
+    padding: (@baseLength * 5) 0;
+    margin-top: @baseLength * 3;
+    ul {
+        margin: 0;
+    }
+    li {
+        display: inline;
+        margin-right: @baseLength;
+    }
+    a {
+        color: lighten(@black, 70%);
+        &:hover {
+            color: lighten(@black, 30%);
+            text-decoration: none;        
+        }
+    }
+    .copyright {
+        text-align: right;
+        display: block;
+    }
+    .social-links {
+        text-align: right;
+        li {
+            margin-right: 0;
+        }
+        a {
+            display: inline-block;
+            width: 36px;
+            height: 42px;
+            .ir;
+        }
+        .dribbble a, .facebook a, .twitter a {
+            background-image: url('../img/social.png'); 
+            background-repeat: no-repeat; 
+        }
+        .dribbble a {
+            background-position: -7px -58px;
+            &:hover {
+                background-position: -7px 0;
+            }
+        }
+        .facebook a { 
+    	    background-position: -7px -174px;
+            &:hover {
+                background-position: -7px -116px;
+            }
+        }  
+        .twitter a {
+	        background-position: -7px -290px;
+            &:hover {
+                background-position: -7px -232px;
+            }
+        }
+    }
+}
