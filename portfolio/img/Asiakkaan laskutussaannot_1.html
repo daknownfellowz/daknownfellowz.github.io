@@ -1,0 +1,1190 @@
+<html xmlns:wicket="http://wicket.apache.org"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Language" content="fi">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+	    <title wicket:id="pagetitle">Numeroalueiden hallinta</title>
+	    <!--[if !IE]><!-->
+		<link rel="stylesheet" type="text/css" href="Asiakkaan%20laskutussaannot_1_files/nam_structure.css" wicket:id="nam_structure"> 
+		<link rel="stylesheet" type="text/css" href="Asiakkaan%20laskutussaannot_1_files/nam_styles.css" wicket:id="nam_styles"> 
+ 		<!--<![endif]-->
+ 		
+ 		<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="../../../../../../resources/com.stonesoft.venus.veclient.webpages.NamBillingRuleConfigurationPage/css/nam_structure_IE.css" wicket:id="nam_structure_IE"/> 
+		<link rel="stylesheet" type="text/css" href="../../../../../../resources/com.stonesoft.venus.veclient.webpages.NamBillingRuleConfigurationPage/css/nam_styles_IE.css" wicket:id="nam_styles_IE"/> 
+		<![endif]-->
+
+		<!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
+	</head>
+	<body>
+	<!--	<div id="minHeight"></div>  -->  <!--Dummy float for Opera and IE8-->
+		    
+			<script id="com-stonesoft-venus-veclient-webpages-NamAdminPage-0" type="text/javascript">
+				 window.onload = setupFunc;
+				 
+				 function setupFunc() {
+				   document.getElementsByTagName('body')[0].onclick = clickFunc;
+				   hideBusysign();
+				         Wicket.Ajax.registerPreCallHandler(showBusysign);
+				         Wicket.Ajax.registerPostCallHandler(hideBusysign);
+				         Wicket.Ajax.registerFailureHandler(hideBusysign);
+				 }
+				 
+				 function hideBusysign() {
+				   document.getElementById('bysy_indicator').style.display ='none';				          
+				 }
+				 
+				 function showBusysign() {
+				   document.getElementById('bysy_indicator').style.display ='inline';				      				      
+				 }
+				 
+				 function clickFunc(eventData) {
+				   var clickedElement = (window.event) ? event.srcElement : eventData.target;
+				   
+				   // var theClass = clickedElement.className;  // "this" is the element clicked
+				   // if class is 'selector' do not show onload icon
+				   
+				   if (clickedElement.tagName.toUpperCase() == 'BUTTON' || (((clickedElement.tagName.toUpperCase() == 'A' || clickedElement.parentNode.tagName.toUpperCase() == 'A') && clickedElement.className != 'selector') && clickedElement.name != 'noBusyIndicator')
+				     || (clickedElement.tagName.toUpperCase() == 'INPUT' && (clickedElement.type.toUpperCase() == 'BUTTON' || clickedElement.type.toUpperCase() == 'SUBMIT') || (clickedElement.type.toUpperCase() == 'IMAGE' && clickedElement.name != 'createCsvReportButton'))) {
+				     showBusysign();
+				   }
+				 } 
+			</script>   
+		
+		<div id="wrap">
+			<nav id="mainnav">
+						
+				<table>
+				<tbody><tr><td style="align: left; vertical-align: middle;" align="left"> 
+			
+				<h1 id="logo" class="alignleft"><a title="xxxxxx" href="http://www.xxxxxx.fi/"><div id="logo"></div></a></h1>
+				
+				</td><td style="align: left; vertical-align: top;" align="left"> 
+								
+				<!-- naviPath -->        
+		 		<div id="navi_path" wicket:id="naviPath"><wicket:panel>
+		    
+		    <ul class="tabs tabs--minimal" wicket:id="myPath"><li id="navsubs" class="mainsection current_page_item"><a class="tabs__anchor" href="http://localhost:7701/front/v9.0/NamBillingRuleConfigurationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">HELSINGIN KAUPUNKI - Asiakkaan laskutussäännöt</a></li><li id="navsubs" class="mainsection"><a class="tabs__anchor" href="http://localhost:7701/front/?wicket:interface=:1:navigationPanel:link_logout::ILinkListener::">Kirjaudu ulos</a></li></ul>
+			
+			<div class="main is-state-b2c "></div>
+			
+		</wicket:panel></div>
+		 		
+   		 		</td></tr>
+				</tbody></table>  
+		 		
+			</nav>
+			<div id="maincontent">
+				<!--  subNavi = left navigation panel  -->	
+				<div id="sub_navi" wicket:id="subNavi"><wicket:panel>
+			<div class="sidebar">
+			    <!--  style="position: relative; left: 10px;"  -->
+			  <ul wicket:id="subNavi"><li><a href="http://localhost:7701/front/v9.0/NamProductConfigurationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Laskutettavien tuotteiden hallinta</a></li><li><p><b>HELSINGIN KAUPUNKI</b></p></li><li><a href="http://localhost:7701/front/v9.0/NamCustomerInformationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Asiakkaan NAM-tiedot</a></li><li class="active"><a href="http://localhost:7701/front/v9.0/NamBillingRuleConfigurationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Asiakkaan laskutussäännöt</a></li><li><a href="http://localhost:7701/front/v9.0/NamProductCustomizationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Asiakkaan tuotteiden hallinta</a></li><li><a href="http://localhost:7701/front/v9.0/NamAdminPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Ohivalintanumeroiden hallinta</a></li><li><a href="http://localhost:7701/front/v9.0/NamMassChangePage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Ohivalintanumeroiden massamuokkaus</a></li><li><a href="http://localhost:7701/front/v9.0/NamJointNumberPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Koontinumeroiden hallinta</a></li></ul>
+			</div>
+		</wicket:panel></div>
+				<div style="display: inline;" id="bysy_indicator"><img id="indicatorImg1a9" src="Asiakkaan%20laskutussaannot_1_files/indicator.gif" wicket:id="indicatorImg"> &nbsp; <span wicket:id="loadingIndicatorText">Haetaan tietoja...</span></div>
+				<!-- <div id="bysy_indicator" style="display: none"> -->
+				<!-- <div id="bysy_indicator" style="display: none; margin-top: 80px;"><img src="" wicket:id="indicatorImg" /> &nbsp; Haetaan tietoja...</div> -->
+				<!-- wicket page -->
+				<div id="content"><wicket:child><wicket:extend>
+	<form id="searchform1aa" action="../../../../../../?wicket:interface=:12:searchform::IFormSubmitListener::" method="post" wicket:id="searchform"><div style="display:none"><input name="searchform1aa_hf_0" id="searchform1aa_hf_0" type="hidden"></div>
+	<span wicket:id="feedback"><wicket:panel>
+  
+</wicket:panel></span>
+
+	<div class="datatabbedpanel">
+		
+ 	    <!-- <div style="margin-bottom: 10px;"> -->
+   	    <div class="data">
+
+
+	  <table class="tbl_list">
+	    <tbody><tr>
+		    <th wicket:id="headers">
+		        <span wicket:id="header">Päätuotteet</span>
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Liittymätyyppi</span>
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Puhepaketit</span>
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Päätelaitteet</span>
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Lisäpalvelut</span>
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Lisäpalvelut 2</span>
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Salainen numero</span>
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Käyttäjäprofiili</span>
+		    </th>
+	    </tr>
+	    <tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">PöytäGSM</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxxn vuokrajohto</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Pöytä GSM(tablegsm)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäkutsu</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:0:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:0:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">PöytäGSM</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Pöytä GSM(tablegsm)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäkutsu</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:1:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:1:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:2:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:2:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:3:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:3:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">GSM</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti B</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäsoitto(ryhmä)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäkutsu</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:4:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:4:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Lisäjonotiedote</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puheposti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:5:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:5:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Lisäjonotiedote</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puheposti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:6:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:6:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Lisäjonotiedote</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:7:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:7:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Lisäjonotiedote</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:8:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:8:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">ACD-jonoraportti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:9:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:9:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:10:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:10:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti B</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:11:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:11:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:12:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:12:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti D</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:13:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:13:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:14:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:14:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Datalaite(modem)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">ACD-jonoraportti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:15:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:15:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:16:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:16:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puheposti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">ACD-jonoraportti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:17:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:17:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:18:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:18:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Grand Theft Auto V</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:19:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:19:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Grand Theft Auto V</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">ACD-jonoraportti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:20:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:20:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:21:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:21:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti B</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:22:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:22:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:23:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:23:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">ACD-jonoraportti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:24:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:24:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti B</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">ACD-jonoraportti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:25:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:25:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti D</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:26:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:26:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti D</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:27:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:27:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti D</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:28:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:28:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti D</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:29:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:29:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti D</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:30:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:30:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti D</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:31:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:31:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Avaya CIU välitysyhteys</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">xxxxxx vuokraliittymä (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puhepaketti C</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Analoginen(ana) (laskutetaan)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agenttinäyttö ylläpito</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Agentin Sähköpostikanava</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Salainen numero</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Avaya Attendant</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:32:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:32:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">Grand Theft Auto V</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:33:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:33:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">PöytäGSM</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Pöytä GSM(tablegsm)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäkutsu</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:34:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:34:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">GSM</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM(gsm)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäkutsu</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:35:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:35:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">GSM</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäsoitto(ryhmä)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäkutsu</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:36:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:36:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">GSM</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM-liittymä</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">GSM(gsm)</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Ryhmäkutsu</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:37:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:37:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="dark" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">GSM</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:38:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:38:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr><tr class="" wicket:id="listView">
+	        <td wicket:id="nested">
+	          <span wicket:id="value">SIPP</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Puheposti</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">Lisäjonotiedote</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value">*</span>
+	        </td>
+	        
+	        <td>                
+        		<input src_active="/front/images/MUOKKAA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/MUOKKAA_secondary_13_hover.png" name="listView:39:editBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/MUOKKAA_secondary_13_normal.png" wicket:id="editBillingRuleChainButton" type="image">        	  
+            </td>
+            <td>
+            	<input src_active="/front/images/POISTA_secondary_13_active.png" id="dSubmit" src_hover="/front/images/POISTA_secondary_13_hover.png" name="listView:39:deleteBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/POISTA_secondary_13_normal.png" wicket:id="deleteBillingRuleChainButton" type="image">
+            </td>
+            
+	    </tr>
+
+	    <tr>
+	    	<td>&nbsp;</td>
+	    	<td>&nbsp;</td>
+	    	<td>&nbsp;</td>
+	    </tr>	    
+	    <tr>
+	    	<td><input src_active="/front/images/LISAA_UUSI_primary_13_active.png" id="dSubmit" src_hover="/front/images/LISAA_UUSI_primary_13_hover.png" name="addNewBillingRuleChainButton" value="" src="Asiakkaan%20laskutussaannot_1_files/LISAA_UUSI_primary_13_normal.png" wicket:id="addNewBillingRuleChainButton" type="image"></td>
+	    	<td>&nbsp;</td>
+	    	<td>&nbsp;</td>
+	    </tr>
+	  </tbody></table>
+
+ 						    	
+	</div>		
+		 
+	</div>  
+  </form> 
+</wicket:extend></wicket:child></div>
+			</div>
+			
+		</div> 
+				
+		<div id="footer2">
+			<div id="legal" class="clear"><span wicket:id="footertext">Copyright xxxxxxxxxxxx. xxxxxx on xxxxxxxxxxxx Finland Oyj:n rekisteröimä tavaramerkki.</span></div>
+		</div>	
+	
+</body></html>

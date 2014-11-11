@@ -29,12 +29,10 @@
     <!--[if lt IE 9]>
    		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
+<!--
     <script type='text/javascript'>//<![CDATA[
     $(window).load(function(){
         $("#nav ul li a[href^='#']").on('click', function(e) {
-
-            alert("test");
 
             // prevent default anchor click behavior
             e.preventDefault();
@@ -53,12 +51,12 @@
 
     });//]]>
 
-    </script>
+    </script> -->
 
 </head>
 
 <body class="kudosplush">
-	
+<section id="about">
 <header class="header">
 	<div class="container">
 		<nav class="navbar">
@@ -74,9 +72,9 @@
 
 				<div class="nav-collapse collapse">
 					<ul class="nav pull-right">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="portfolio.html">Portfolio</a></li>
-						<li><a href="contact.html">Contact Me</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#portfolio">Portfolio</a></li>
+						<li><a href="#contact">Contact</a></li>
 					</ul>
 				</div>
 			</div>
@@ -95,41 +93,123 @@
 		</div>
 	</div>
 </header>
-
+</section>
 <!-- INDEX: ETUSIVU -->
-<section id="index">
 <div class="content">
 	<div class="container">
 		<!-- Call to action (cta) -->
 		<div class="cta row">
-			<div class="copy-text span9">
+			<!--<div class="copy-text span9">
 				<p>This web site is built with Bootstrap and jQuery and presents responsive design.</p>
-			</div>
+			</div>-->
+            <div class="testimonial row span9">
+                <p>Front End development, Back End development, UX and usability, graphics. No problem.</p>
+            </div>
+
+
+
 			<div class="button span3">
                 <i class="copyright"></i>
 				<a class="btn btn-primary btn-block btn-order" href="mailto:anssi.syrjala@gmail.com">Send mail</a>
-
 			</div>
 		</div>
-
 		<hr>
-		<!--
-		<div class="gallery row">
-			<figure class="span3">
-				<img class="img-polaroid" src="img/oktoberfest14_part2.jpg" alt="">
-			</figure>
 
-		</div>
-
-		<hr> -->
-
-		<div class="testimonial row">
-			<p>Front End development, Back End development, UX and usability, graphics. No problem.</p>
-		</div>
 
 	</div>
 </div>
+
+
+<section id="portfolio">
+<section class="content">
+<div class="container" style="margin-top: 60px">
+    <h1>Portfolio</h1>
+
+    <small>This web site is built with Bootstrap and jQuery and presents responsive design.
+        Other examples of different types of work or projects.</small>
+
+
+    <div class="gallery page">
+        <div class="row">
+            <figure class="span3">
+                <img class="img-polaroid" src="img/saunalahti_puhelinkauppa_280x280.jpg">
+            </figure>
+            <figure class="span3">
+                <img class="img-polaroid" src="img/elisavahti_280x280.jpg">
+            </figure>
+            <figure class="span3">
+                <img class="img-polaroid" src="img/eon_280x280.jpg">
+            </figure>
+            <figure class="span3">
+                <img class="img-polaroid" src="img/skynet_280x280.jpg">
+            </figure>
+            <!--
+            <figure class="span3">
+                <img class="img-polaroid" src="">
+            </figure>
+            <figure class="span3">
+                <img class="img-polaroid" src="">
+            </figure>
+            <figure class="span3">
+                <img class="img-polaroid" src="">
+            </figure>
+            <figure class="span3">
+                <img class="img-polaroid" src="">
+            </figure>
+            -->
+        </div>
+
+        <hr>
+
+    </div>
+</div>
 </section>
+</section>
+
+
+<section id="contact">
+<section class="content">
+    <div class="container" style="margin-top: 60px">
+        <h1>Contact Me</h1>
+
+        <small>I am currently looking for new challenges. Intrested in front end /full stack development positions or lead developer position.</small>
+
+        <div class="contact page">
+
+            <div class="row hidden-phone">
+                <div class="map span12">
+                    <img class="img-polaroid" src="img/map_helsinki2.jpg" alt="This is where we are">
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="row">
+
+                <div class="address span6">
+                    <h3>Anssi Syrjälä</h3>
+                    <address>
+                        Residence: Helsinki (northern)<br>
+                        Finland<br>
+
+                        <abbr title="Phone">P.</abbr> (+358) 40-1726693 <br>
+                        <abbr title="Mail">mail</abbr> anssi.syrjala@gmail.com
+                    </address>
+
+                </div>
+
+                <div class="button span3">
+                    <a class="btn btn-primary btn-block btn-order" href="mailto:anssi.syrjala@gmail.com">Send mail</a>
+                    <small>anssi.syrjala@gmail.com</small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+</section>
+
+
 
 <!-- Footer Section -->
 <footer class="footer">
@@ -138,9 +218,9 @@
 			<div class="span6">
 				<nav class="nav-footer">
 					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="portfolio.html">Portfolio</a></li>
-						<li><a href="contact.html">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
 					</ul>
 				</nav>
 			</div>
