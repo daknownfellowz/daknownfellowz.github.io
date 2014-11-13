@@ -100,60 +100,12 @@
             color: #5a5a5a;
             padding-bottom: 0;
         }
-		
-		/* shadow for images  */
-		.shadowed {
-			/*box-shadow: 20px 10px 55px #4F4E4F;*/
-			    box-shadow: 20px 20px 50px #ccc;
-		}
-		
-		
-		.carousel-control:hover { cursor: pointer; }
-		
-<!-- LOGON JA LINKKIEN VÄLIIN TILAA:   Bootstrap.css rivi 4059   navbar-nav laita:  float-right ja margin-rightia vähän -->
-		
 
-#nav{
-    position:fixed;    
-    background: rgba(0,0,0, 0.5);
-    right: 10px;
-    top: 10p;
-}
 
-#nav a{
-    color: white;
-}
 
 
     </style>
-	
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
 
-	
-	<script>
-	$(function() {
-	
-	  $('a[href*=#]').not("[href=#], [href=#myCarousel]").click(function() {
-	  // $('a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html,body').animate({
-	          scrollTop: target.offset().top
-	        }, 1000);
-	        return false;
-	      }
-	    }
-	
-		
-		
-	  });
-	});
-	</script> 
-	
 </head>
 <!-- NAVBAR
 ================================================== -->
@@ -161,7 +113,6 @@
 <div class="navbar-wrapper">
     <div class="container">
 
-	   <!-- orig: navbar navbar-inverse navbar-static-top -->
         <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
             <div class="container"> <!-- CONTAINER -->
                 <div class="navbar-header">
@@ -171,8 +122,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-					
-                    <img src="img/allekirj_logo_punamusta.jpg">					
+                    <img src="img/allekirj_logo_punamusta.jpg">
 
                     <a class="navbar-brand" href="#"></a>
                 </div>
@@ -209,13 +159,11 @@
                     <div class="row" style="margin-left: 100px; margin-right: 100px">
                         <div class="testimonial row col-lg-10">
                             <h1>Anssi Syrjälä</h1>
-							<!-- <p style="color: #456;"> -->
-							<p>Full stack developer (coding/web developing/graphics) based in Helsinki, Finland. Looking for new challenges</p>
+                            <p style="color: #456;">Full stack developer (coding/web developing/graphics) based in Helsinki, Finland. Looking for new challenges</p>
                         </div>
 
-                        <div class="button col-lg-2"> 
-						<!--<a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-search"></span> Search</a>-->
-                            <img src="img/oktoberfest14_part2.jpg" style="width: 200px; box-shadow: 20px 10px 55px #4F4E4F;">
+                        <div class="button col-lg-2">
+                            <img src="img/oktoberfest14_part2.jpg" style="width: 200px">
                         </div>
                     </div>
 
@@ -226,17 +174,9 @@
             <img src="slide-02_new.jpg">
             <div class="container">
                 <div class="carousel-caption">
-					<div class="testimonial row col-lg-12">
-                    <h1>Need a creative frontend developer with an eye for UI?</h1>					
-					<p>
-					<ul>
-					<li>HTML5, CSS3, JavaScript and frameworks eg. jQuery, Bootstrap, AngularJS</li>
-					<li>Motivated, willing to learn what I don't know</li>
-					</ul>
-					</p>
-					</div>
-                    
-				<!-- <p><a class="btn btn-lg btn-primary" href="mailto:anssi.syrjala@gmail.com" role="button">Send Mail</a></p> -->
+                    <h1>Another example headline.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
                 </div>
             </div>
         </div>
@@ -244,18 +184,9 @@
             <img src="slide-03_new.jpg">
             <div class="container">
                 <div class="carousel-caption">
-					<div class="testimonial row col-lg-12">
-                    <h1>Looking for Scrum/Kanban process knowledge?</h1>
-					<p>
-					<ul>
-					<li>Scrum Master experience</li>
-					<li>Methodologies: Scrum, Kanban and ITIL</li>
-					<li>People skills</p>
-					</ul>
-					</p>
-                    
-				<!-- <p><a class="btn btn-lg btn-primary" href="mailto:anssi.syrjala@gmail.com" role="button">Send Mail</a></p> -->
-				    </div>
+                    <h1>One more for good measure.</h1>
+                    <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                    <p><a class="btn btn-lg btn-primary" href="#" role="button">Browse gallery</a></p>
                 </div>
             </div>
         </div>
@@ -315,69 +246,45 @@
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
-        <div class="col-lg-3"> <!-- col-lg-4 -->
-            <img class="img-thumbnail shadowed" src="img/saunalahti_puhelinkauppa_280x280.jpg" alt="Saunalahti web shop" style="width: 140px; height: 140px;">
+        <div class="col-lg-4">
+            <img class="img-thumbnail" src="img/saunalahti_puhelinkauppa_280x280.jpg" alt="Saunalahti web shop" style="width: 140px; height: 140px;">
             <h2>Saunalahti Web Shop</h2>
             <p>Saunalahti web shop from year 2007-2008</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="img-thumbnail shadowed" src="img/eon_280x280.jpg" alt="E.ON Finland Internet site 2005" style="width: 140px; height: 140px;">
+        <div class="col-lg-4">
+            <img class="img-thumbnail" src="img/eon_280x280.jpg" alt="E.ON Finland Internet site 2005" style="width: 140px; height: 140px;">
             <h2>E.ON Finland's Internet site renewal 2005</h2>
             <p>Renewed E.ON Finlands internet site</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="img-thumbnail shadowed" src="img/elisavahti_280x280.jpg" alt="Elisa Vahti" style="width: 140px; height: 140px;">
+        <div class="col-lg-4">
+            <img class="img-thumbnail" src="img/elisavahti_280x280.jpg" alt="Elisa Vahti" style="width: 140px; height: 140px;">
             <h2>Elisa Vahti</h2>
             <p>Elisa Vahti 2007-2008</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="img-thumbnail shadowed" src="img/skynet_280x280.jpg" alt="Skynet" style="width: 140px; height: 140px;">
+    </div><!-- /.row -->
+    <!-- Three columns of text below the carousel -->
+    <div class="row">
+        <div class="col-lg-4">
+            <img class="img-thumbnail" src="img/skynet_280x280.jpg" alt="Skynet" style="width: 140px; height: 140px;">
             <h2>Skynet</h2>
             <p>Collaboration site 2005-2007. Era before Facebook.</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="img-thumbnail shadowed" src="img/eon_280x280.jpg" alt="E.ON Finland Internet site 2005" style="width: 140px; height: 140px;">
-            <h2><span class="glyphicon glyphicon-film"></span> Raaka Päivä (short film)</h2>
-            <p><span class="glyphicon glyphicon-film"></span> Renewed E.ON Finlands internet site</p>
+        <div class="col-lg-4">
+            <img class="img-thumbnail" src="img/eon_280x280.jpg" alt="E.ON Finland Internet site 2005" style="width: 140px; height: 140px;">
+            <h2>E.ON Finland's Internet site renewal 2005</h2>
+            <p>Renewed E.ON Finlands internet site</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">			
+        <div class="col-lg-4">
+            <img class="img-thumbnail" src="img/elisavahti_280x280.jpg" alt="Elisa Vahti" style="width: 140px; height: 140px;">
             <h2>Elisa Vahti</h2>
-            <p>
-			<img class="img-thumbnail shadowed" src="img/elisavahti_280x280.jpg" alt="Elisa Vahti" style="width: 140px; height: 140px;">
-			</p>
+            <p>Elisa Vahti 2007-2008</p>
             <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-		
-		
-		
-    </div><!-- /.row -->
-	
-	<hr>
-	
-	<!-- Youtube videos -->
-    <div class="row">
-        
-		<div class="col-lg-6">
-			<div>				
-				<iframe src="http:////www.youtube.com/embed/Nn60LPKCjOw" height="315" width="420" allowfullscreen="" frameborder="0"></iframe>
-			</div>
-		</div>
-		
-		<div class="col-lg-6">
-			<div>				
-				<iframe src="http:////www.youtube.com/embed/Nn60LPKCjOw" height="315" width="420" allowfullscreen="" frameborder="0"></iframe>
-			</div>
-		</div>
-		
-
-
-			
-        
     </div><!-- /.row -->
 
     <hr>
@@ -397,13 +304,13 @@
         </div>
         <div class="row">
             <div class="testimonial row col-lg-12">
-                <img class="shadowed" src="img/map_helsinki2.jpg" alt="This is where we are">
+                <img class="img-thumbnail" src="img/map_helsinki2.jpg" alt="This is where we are">
             </div>
         </div>
         <div class="row">
-            <!--<div class="testimonial row col-lg-12"> -->
+            <div class="testimonial row col-lg-12">
 
-                <div class="small col-lg-6" style="margin-right: 0">
+                <div class="small">
                     <h3>Anssi Syrjälä</h3>
                     <address>
                         Residence: Helsinki (northern)<br>
@@ -415,15 +322,11 @@
 
                 </div>
 
-				<div class="button col-lg-6">
-					<a class="btn btn-lg btn-primary" role="button" href="mailto:anssi.syrjala@gmail.com">Send mail</a>
-				</div>
-				<!--
                 <div class="button span3">
                     <a class="btn btn-primary btn-block btn-order" href="mailto:anssi.syrjala@gmail.com">Send mail</a>
                     <small>anssi.syrjala@gmail.com</small>
-                </div> -->
-            <!--</div>-->
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -459,9 +362,8 @@
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-<script src="js/bootstrap.min.31.js"></script>
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <!--<script src="../../assets/js/docs.min.js"></script>-->
 <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!-- <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
