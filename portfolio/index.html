@@ -6,16 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
 
-    <title>Carousel Template for Bootstrap</title>
+    <title>Portfolio - Anssi Syrjälä</title>
 
-    <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
-
-    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
-    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -26,10 +21,13 @@
     <!-- Custom styles for this template -->
     <link href="css/carousel.css" rel="stylesheet">
 
-
     <style type="text/css">
         h1 {
             color: #4bf;
+        }
+
+        a {
+            font-weight: bold;
         }
         .brand {
             background: url("img/allekirj_logo_punamusta.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
@@ -104,32 +102,25 @@
 		
 		/* shadow for images  */
 		.shadowed {
-			/*box-shadow: 20px 10px 55px #4F4E4F;*/
-			    box-shadow: 20px 20px 50px #ccc;
+			box-shadow: 20px 20px 50px #ccc;
 		}
 		
 		.carousel-control:hover { cursor: pointer; }
-		
-<!-- LOGON JA LINKKIEN VÄLIIN TILAA:   Bootstrap.css rivi 4059   navbar-nav laita:  float-right ja margin-rightia vähän -->
-		
 
-#nav{
-    position:fixed;    
-    background: rgba(0,0,0, 0.5);
-    right: 10px;
-    top: 10p;
-}
+        #nav{
+            position:fixed;
+            background: rgba(0,0,0, 0.5);
+            right: 10px;
+            top: 10p;
+        }
 
-#nav a{
-    color: white;
-}
-
+        #nav a{
+            color: white;
+        }
 
     </style>
 	
- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
-<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> -->
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	
 	<script>
 	$(function() {
@@ -147,16 +138,14 @@
 	        return false;
 	      }
 	    }
-	
-		
-		
+
 	  });
 	});
 	</script> 
 	
 </head>
-<!-- NAVBAR
-================================================== -->
+
+<!-- NAVBAR -->
 <body>
 <div class="navbar-wrapper">
     <div class="container">
@@ -190,9 +179,7 @@
     </div>
 </div>
 
-
-<!-- Carousel
-================================================== -->
+<!-- Carousel  -->
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
@@ -209,12 +196,10 @@
                     <div class="row" style="margin-left: 100px; margin-right: 100px">
                         <div class="testimonial row col-lg-10">
                             <h1>Anssi Syrjälä</h1>
-							<!-- <p style="color: #456;"> -->
 							<p>Full stack developer (coding/web developing/graphics) based in Helsinki, Finland. Looking for new challenges</p>
                         </div>
 
-                        <div class="button col-lg-2"> 
-						<!--<a href="#" class="btn btn-info btn-lg"><span class="glyphicon glyphicon-search"></span> Search</a>-->
+                        <div class="button col-lg-2">
                             <img src="img/oktoberfest14_part2.jpg" style="width: 200px; box-shadow: 20px 10px 55px #4F4E4F;">
                         </div>
                     </div>
@@ -235,8 +220,7 @@
 					</ul>
 					</p>
 					</div>
-                    
-				<!-- <p><a class="btn btn-lg btn-primary" href="mailto:anssi.syrjala@gmail.com" role="button">Send Mail</a></p> -->
+
                 </div>
             </div>
         </div>
@@ -253,8 +237,7 @@
 					<li>People skills</p>
 					</ul>
 					</p>
-                    
-				<!-- <p><a class="btn btn-lg btn-primary" href="mailto:anssi.syrjala@gmail.com" role="button">Send Mail</a></p> -->
+
 				    </div>
                 </div>
             </div>
@@ -271,7 +254,6 @@
 </div><!-- /.carousel -->
 
 
-
 <div class="container">
     <div class="row" style="margin-left: 100px; margin-right: 100px">
     <div class="testimonial row col-lg-10">
@@ -279,25 +261,13 @@
     </div>
 
     <div class="button col-lg-2">
-        <a class="btn btn-lg btn-primary" href="mailto:anssi.syrjala@gmail.com" role="button">Send mail</a>
+        <a class="btn btn-lg btn-primary" href="mailto:anssi.syrjala@gmail.com" role="button">
+            <span class="glyphicon glyphicon-envelope" style="vertical-align: baseline"></span>&nbsp; Send mail</a>
     </div>
     </div>
 
     <hr>
 </div>
-
-
-
-
-
-
-
-<!-- Marketing messaging and featurettes
-================================================== -->
-<!-- Wrap the rest of the page in another container to center all the content. -->
-
-
-
 
 
 <section id="portfolio">
@@ -305,94 +275,93 @@
     <div class="row" style="margin-left: 100px; margin-right: 100px">
         <div class="testimonial row col-lg-12">
         <h1>Portfolio</h1>
-        <small>This web site is built with Bootstrap and jQuery and presents responsive design. Other examples of different types of work or projects.</small>
+        <small>This web site is built with Bootstrap and jQuery and presents responsive design. Below are some examples of my different types work or past projects.</small>
+
+                <h1><span class="glyphicon glyphicon-cog"></span>
+
+                <span class="glyphicon glyphicon-pencil"></span>
+
+                <span class="glyphicon glyphicon-picture"></span>
+                <span class="glyphicon glyphicon-user"></span>
+
+                <span class="glyphicon glyphicon-certificate"></span>
+
+                <span class="glyphicon glyphicon-list-alt"></span></h1>
         </div>
     </div>
+
 </div>
-<br><br>
+
 
 <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
+        <!-- MATOPELI -->
+        <div class="col-lg-3">
+            <img class="img-thumbnail shadowed" src="img/matopeli_280x280.jpg" alt="HTML5 worm" style="width: 140px; height: 140px;">
+            <h3>Nokia worm game JavaScript</h3>
+            <p>Memories from the golden era of Nokia. Worm game done with JavaScript and HTML5 canvas. Controls: keyboard cursor keys.</p>
+            <p><a class="btn btn-default" href="../html5worm.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <!-- NAMkäli -->
+        <div class="col-lg-3"> <!-- col-lg-4 -->
+            <img class="img-thumbnail shadowed" src="img/nam_280x280.jpg" alt="Service/product mgmt tool for teleoperator" style="width: 140px; height: 140px;">
+            <h3>Service/product mgmt tool for teleoperator</h3>
+            <p>Renewing of old unusable tool with new intuitive and more user friendly UI. Done with Java, Wicket (ajax components eg. Ajax tabbedpanel). Static html demo where
+            all recognizable classified data is hidden. Red links are clickable.
+            <p><a class="btn btn-default" href="NAM_kalit/numeroalueiden_hallinta_1.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
         <div class="col-lg-3"> <!-- col-lg-4 -->
             <img class="img-thumbnail shadowed" src="img/saunalahti_puhelinkauppa_280x280.jpg" alt="Saunalahti web shop" style="width: 140px; height: 140px;">
-            <h2>Saunalahti Web Shop</h2>
-            <p>Saunalahti web shop from year 2007-2008</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <h3>Saunalahti Web Shop</h3>
+            <p>Saunalahti web shop from year 2007-2008. Static html page saved from Wayback machine site. Done with Java, Freemarker and Javascript.
+            Mobile phone grid is dynamically genarated from database data.</p>
+
+            <p><a class="btn btn-default" href="img/saunalahti_puhelinkauppa.jpg" target="_blank" role="button">Open screen shot &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
+
         <div class="col-lg-3">
             <img class="img-thumbnail shadowed" src="img/eon_280x280.jpg" alt="E.ON Finland Internet site 2005" style="width: 140px; height: 140px;">
-            <h2>E.ON Finland's Internet site renewal 2005</h2>
-            <p>Renewed E.ON Finlands internet site</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <h3>E.ON Finland's Internet site renewal 2005</h3>
+            <p>Renewed Internet site for E.ON Finland. Full hierarchy and content. Layout was done according to E.ON's style manual. There was no decent state in Wayback machine so here
+            is just PhotoShop layout scetch from my specification.</p>
+            <p><a class="btn btn-default" href="img/eon_luonnostelma.jpg" role="button">Open scetch screen shot &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="img-thumbnail shadowed" src="img/elisavahti_280x280.jpg" alt="Elisa Vahti" style="width: 140px; height: 140px;">
-            <h2>Elisa Vahti</h2>
-            <p>Elisa Vahti 2007-2008</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
+    </div>
+
+    <div class="row">
         <div class="col-lg-3">
             <img class="img-thumbnail shadowed" src="img/skynet_280x280.jpg" alt="Skynet" style="width: 140px; height: 140px;">
-            <h2>Skynet</h2>
-            <p>Collaboration site 2005-2007. Era before Facebook.</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+            <h3>Skynet</h3>
+            <p>Skynet was a collaboration site for our entourage back in the days 2005-2007. Good old times before Facebook. As a sneak peek here is a non dynamic/non fully working front page from the golden era of Skynet.</p>
+            <p><a class="btn btn-default" href="skynet/index.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">
-            <img class="img-thumbnail shadowed" src="img/eon_280x280.jpg" alt="E.ON Finland Internet site 2005" style="width: 140px; height: 140px;">
-            <h2><span class="glyphicon glyphicon-film"></span> Raaka Päivä (short film)</h2>
-            <p><span class="glyphicon glyphicon-film"></span> Renewed E.ON Finlands internet site</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-3">			
-            <h2>Elisa Vahti</h2>
-            <p>
-			<img class="img-thumbnail shadowed" src="img/elisavahti_280x280.jpg" alt="Elisa Vahti" style="width: 140px; height: 140px;">
-			</p>
-            <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-		
-		
-		
-    </div><!-- /.row -->
-	
-	<hr>
-	
-	<!-- Youtube videos -->
-    <div class="row">
-        
-		<div class="col-lg-6">
-			<div>				
-				<iframe src="http:////www.youtube.com/embed/Nn60LPKCjOw" height="315" width="420" allowfullscreen="" frameborder="0"></iframe>
-			</div>
-		</div>
-		
-		<div class="col-lg-6">
-			<div>				
-				<iframe src="http:////www.youtube.com/embed/Nn60LPKCjOw" height="315" width="420" allowfullscreen="" frameborder="0"></iframe>
-			</div>
-		</div>
-		
 
+        <div class="col-lg-6">
+            <h3>Raaka päivä (short film)</h3>
+            <div>
+                <iframe src="http:////www.youtube.com/embed/Nn60LPKCjOw" height="215" width="320" allowfullscreen="" frameborder="0"></iframe>
+            </div>
+            <p>Raaka Päivä short film (2002). Film was made at Multimedia course at Haaga-Helia polytechnic school.</p>
+        </div>
 
-			
-        
     </div><!-- /.row -->
 
     <hr>
 </section>
 
-
 </div>
-
 
 <section id="contact">
     <div class="container">
         <div class="row" style="margin-left: 100px; margin-right: 100px">
             <div class="testimonial row col-lg-12">
                 <h1>Contact</h1>
-                <small>I am looking for new challenges. Intrested in frontend/full stack dev positions or lead developer position.</small>
+                <small>I am currently looking for new challenges related to eg. frontend/full stack development, UX or lead developer positions.</small>
+                <br>
+                <h3><a href="CV_AnssiSyrjala.pdf"><span class="glyphicon glyphicon-floppy-save"></span> Download CV</a></h3>
             </div>
         </div>
         <div class="row">
@@ -403,21 +372,20 @@
         <div class="row">
             <!--<div class="testimonial row col-lg-12"> -->
 
-                <div class="small col-lg-6" style="margin-right: 0">
-                    <h3>Anssi Syrjälä</h3>
+                <div class="testimonial col-lg-12">
+                    <div class="small">
                     <address>
-                        Residence: Helsinki (northern)<br>
-                        Finland<br>
-
+                        Anssi Syrjälä<br>
+                        Residence: Helsinki, Finland<br>
                         <abbr title="Phone">P.</abbr> (+358) 40-1726693 <br>
-                        <abbr title="Mail">mail</abbr> anssi.syrjala@gmail.com
+                        <abbr title="Mail">mail</abbr> anssi.syrjala[at]gmail.com
                     </address>
-
+                        <a class="btn btn-lg btn-primary" role="button" href="mailto:anssi.syrjala@gmail.com">
+                        <span class="glyphicon glyphicon-envelope" style="vertical-align: baseline"></span>&nbsp; Send mail</a>
+                    </div>
                 </div>
 
-				<div class="button col-lg-6">
-					<a class="btn btn-lg btn-primary" role="button" href="mailto:anssi.syrjala@gmail.com">Send mail</a>
-				</div>
+
 				<!--
                 <div class="button span3">
                     <a class="btn btn-primary btn-block btn-order" href="mailto:anssi.syrjala@gmail.com">Send mail</a>
