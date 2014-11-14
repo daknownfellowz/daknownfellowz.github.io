@@ -92,7 +92,7 @@
             color: #4bf;
             margin-top: 30px;
             padding: 50px 0;
-            box-shadow:inset 0 15px 35px -16px #ffffff;
+            box-shadow: 0 0 35px #000000;
         }
 
         body {
@@ -104,6 +104,9 @@
 		.shadowed {
 			box-shadow: 20px 20px 50px #ccc;
 		}
+        .shadowed-light {
+            box-shadow: 2px 2px 70px #403e3e;
+        }
 		
 		.carousel-control:hover { cursor: pointer; }
 
@@ -126,7 +129,7 @@
 	$(function() {
 	
 	  $('a[href*=#]').not("[href=#], [href=#myCarousel]").click(function() {
-	  // $('a[href*=#]:not([href=#])').click(function() {
+
 	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
 
 	      var target = $(this.hash);
@@ -150,8 +153,7 @@
 <div class="navbar-wrapper">
     <div class="container">
 
-	   <!-- orig: navbar navbar-inverse navbar-static-top -->
-        <nav class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <nav class="navbar navbar-inverse navbar-static-top shadowed-light" role="navigation">
             <div class="container"> <!-- CONTAINER -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -196,11 +198,11 @@
                     <div class="row" style="margin-left: 100px; margin-right: 100px">
                         <div class="testimonial row col-lg-10">
                             <h1>Anssi Syrjälä</h1>
-							<p>Full stack developer (coding/web developing/graphics) based in Helsinki, Finland. Looking for new challenges</p>
+							Full stack developer (code/web dev/ux/gfx) based in Helsinki, Finland. Looking for new challenges
                         </div>
 
-                        <div class="button col-lg-2">
-                            <img src="img/oktoberfest14_part2.jpg" style="width: 200px; box-shadow: 20px 10px 55px #4F4E4F;">
+                        <div class="button col-lg-2">         <!-- box-shadow: 20px 10px 55px #4F4E4F; -->
+                            <img src="img/oktoberfest14_200px.jpg" class="shadowed-light" style="width: 200px">
                         </div>
                     </div>
 
@@ -317,7 +319,7 @@
             <img class="img-thumbnail shadowed" src="img/saunalahti_puhelinkauppa_280x280.jpg" alt="Saunalahti web shop" style="width: 140px; height: 140px;">
             <h3>Saunalahti Web Shop</h3>
             <p>Saunalahti web shop from year 2007-2008. Static html page saved from Wayback machine site. Done with Java, Freemarker and Javascript.
-            Mobile phone grid is dynamically genarated from database data.</p>
+            Mobile phone grid is dynamically generated from database data.</p>
 
             <p><a class="btn btn-default" href="img/saunalahti_puhelinkauppa.jpg" target="_blank" role="button">Open screen shot &raquo;</a></p>
         </div><!-- /.col-lg-4 -->
@@ -359,7 +361,7 @@
         <div class="row" style="margin-left: 100px; margin-right: 100px">
             <div class="testimonial row col-lg-12">
                 <h1>Contact</h1>
-                <small>I am currently looking for new challenges related to eg. frontend/full stack development, UX or lead developer positions.</small>
+                <small>I'm currently looking for new challenges related to eg. frontend/full stack development, UX or lead developer positions. Please feel free to contact me.</small>
                 <br>
                 <h3><a href="CV_AnssiSyrjala.pdf"><span class="glyphicon glyphicon-floppy-save"></span> Download CV</a></h3>
             </div>
