@@ -8,6 +8,21 @@
 
     <title>SEKLocator</title>
     <link href="assets/css/app.css" rel="stylesheet" type="text/css">
+	<style>
+	img.displayed {
+		display: block;
+		margin-left: auto;
+		margin-right: auto 
+	}
+	
+	p.blocktext {
+		margin-left: auto;
+		margin-right: auto;		
+		/*width: 12em;*/
+	}	
+	</style>
+	
+<IMG class="displayed" src="..." alt="...">
 	
 	
     <script src="/assets/js/dependencies.js"></script>
@@ -33,13 +48,10 @@
   <div class="row">
   <div class="large-12 columns">
     <form method='get' action="http://infinite-sierra-8868.herokuapp.com">
-	
-		<div class="row">
-		<div class="large-12 centered columns">
-		<img src="sek_grey.png">
-			<h1>SEKLocator login</h1>
-		</div>
-		   </div>
+		
+	 <img class="displayed" src="sek_grey.png">
+	 <p class="blocktext">SEKLocator login</p> 
+				
        <div class="row">
          <div class="large-12 columns">
              <input type="text" name="username" id="username" placeholder="Username" />
