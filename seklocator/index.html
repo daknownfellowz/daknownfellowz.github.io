@@ -7,200 +7,64 @@
 	<meta name="viewport" content="initial-scale=1.0, user-scalable=no"> <!-- better with map ????? -->
 
     <title>SEKLocator</title>
-    <link href="/assets/css/app.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/app.css" rel="stylesheet" type="text/css">
 	
-	<!-- Geolocator style -->	
-	<style>
-     html, body, #map-canvas {
-        height: 400px;
-        margin: 0px;
-        padding: 0px
-    }
-	.map-canvas *, .map-canvas *:before, .map-canvas *:after {
-		-webkit-transform: none !important; 
-	}	
-		
-	.map img {
-	max-width: 500px;
-	}	
 	
-	li { cursor: pointer; }
-	
-    </style>
-	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>	
     <script src="/assets/js/dependencies.js"></script>
     <script src="/assets/js/routes.js"></script>
     <script src="/assets/js/app.js"></script>
 	
-	<script>
-	var map;	// Google map object
-	
-	// Initialize and display a google map
-	function Init()
-	{
-		// Create a Google coordinate object for where to initially center the map
-		var latlng = new google.maps.LatLng( 38.8951, -77.0367 );	// Washington, DC
-		
-		// Map options for how to display the Google map
-		var mapOptions = { zoom: 6 };   // var mapOptions = { zoom: 12, center: latlng  };
-		
-		// Show the Google map in the div with the attribute id 'map-canvas'.
-		map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-		
-		addMarkers();
-		
-		// Try HTML5 geolocation
-		if(navigator.geolocation) {
-		navigator.geolocation.getCurrentPosition(function(position) {
-		  var pos = new google.maps.LatLng(position.coords.latitude,
-										   position.coords.longitude);
-
-		  var infowindow = new google.maps.InfoWindow({
-			map: map,
-			position: pos,
-			content: 'Location found using HTML5.'
-		  });
-
-		  map.setCenter(pos);
-		}, function() {
-		  handleNoGeolocation(true);
-		});
-		} else {
-		// Browser doesn't support Geolocation
-		handleNoGeolocation(false);
-		}				
-	}
-	
-    // Function for adding a marker to the page.
-    function addMarker(location) {
-        marker = new google.maps.Marker({
-            position: location,
-            map: map
-        });
-    }
-
-    // Add markers (Sek offices)
-    function addMarkers() {           
-           addMarker(new google.maps.LatLng(61.492495, 21.798652));
-		   addMarker(new google.maps.LatLng(60.164780, 24.933238));
-		   addMarker(new google.maps.LatLng(60.181949, 24.954584));
-		   addMarker(new google.maps.LatLng(60.164780, 24.933238));
-		   addMarker(new google.maps.LatLng(60.167773, 24.936065));
-    }
-	
-	function UpdateMap(address)
-	{
-		var geocoder = new google.maps.Geocoder();    // instantiate a geocoder object		
-	
-		// Make asynchronous call to Google geocoding API
-		geocoder.geocode( { 'address': address }, function(results, status) {
-			var addr_type = results[0].types[0];	// type of address inputted that was geocoded
-			if ( status == google.maps.GeocoderStatus.OK ) 
-				ShowLocation( results[0].geometry.location, address, addr_type );
-			else     
-				alert("Geocode was not successful for the following reason: " + status);        
-		});
-	}	
-	
-	// Show the location (address) on the map.
-	function ShowLocation( latlng, address, addr_type )
-	{
-		// Center the map at the specified location
-		map.setCenter( latlng );
-		
-		// Set the zoom level according to the address level of detail the user specified
-		var zoom = 12;
-		switch ( addr_type )
-		{
-		case "administrative_area_level_1"	: zoom = 6; break;		// user specified a state
-		case "locality"						: zoom = 10; break;		// user specified a city/town
-		case "street_address"				: zoom = 15; break;		// user specified a street address
-		}
-		map.setZoom( zoom );				
-	}
-	
-	// Call the method 'Init()' to display the google map when the web page is displayed ( load event )
-	google.maps.event.addDomListener( window, 'load', Init );
-	
-		
-	window.onload=function(){
-		// locate your element and add the Click Event Listener
-		document.getElementById("locations-list").addEventListener("click",function(e) {
-
-			console.log(e.target.nodeName)
-			
-			// split coordinates:
-			var fullString = e.target.id;
-			var index = fullString.indexOf(",");
-			var first = fullString.substr(0, index); // Gets latitude
-			var second = fullString.substr(index + 1);  // Gets longitude						
-			
-			if (e.target && e.target.nodeName == "LI") {
-				UpdateMap(e.target.id);			
-			}
-		});		
-				
-		// SORT
-		var desc = false;
-		document.getElementById("sekOfficesHeader").onclick = function() {
-		sortUnorderedList("locations-list", desc);
-		desc = !desc;
-		return false;
-	  }
-		
-	}//]]>  
-
-	function sortUnorderedList(ul, sortDescending) {
-	  if(typeof ul == "string")
-		ul = document.getElementById(ul);
-
-	  var lis = ul.getElementsByTagName("LI");
-	  var vals = [];
-
-	  for(var i = 0, l = lis.length; i < l; i++)
-		vals.push(lis[i].innerHTML);
-
-	  vals.sort();
-
-	  if(sortDescending)
-		vals.reverse();
-
-	  for(var i = 0, l = lis.length; i < l; i++)
-		lis[i].innerHTML = vals[i];
-	}
-
-    </script>
-
   </head>
   <body>
   
     <div class="grid-frame vertical">
       <div class="grid-content shrink" style="padding: 0;">
         <ul class="primary condense menu-bar">
-          <li><a><img src="../sek_grey.png" style="width: 50px; height: 25px"></a></li>
-          <li><a href="#">Home</a></li>
-          <li><a href="about.html">About</a></li>          
+          <li><a href="#"><img src="sek_grey.png" style="width: 50px; height: 25px"></a></li>                    
         </ul>
       </div>
       <div class="grid-content">	  
-	  
-	<!-- Dislay Google map here -->
-	<div id='map-canvas' ></div><br/>
-	<div style="text-align: center">	
-		<h1 id="sekOfficesHeader" style="cursor: pointer" label="click to sort" title="click to sort">SEK offices</h1> <!--<input type="button" id="test" value="Sort by office name (click again to reverse)"/> -->
-		
-		<ul id="locations-list" class="no-bullet">
-		<li id="60.167772, 24.935625">SEK & GREY Markkinointitoimisto, Annankatu 28</li>
-		<li id="61.492495, 21.798652">SEK Point, Pohjoisranta 11 Pori</li>
-		<li id="60.164780, 24.933238">Dagmar Helsinki, L&ouml;nnrotinkatu 25 A</li>
-		<li id="60.181949, 24.954584">Dagmar Tampere, H&auml;meenkatu 16</li>
-		<li id="60.164780, 24.933238">Mediatoimisto Voitto, L&ouml;nnrotinkatu 25</li>
-		<li id="60.167773, 24.936065">Adsek Helsinki, Annankatu 27</li>		
-		</ul>
-		
-	</div>	
-    </div>	  
-    </div>
+	
 
+	
+
+<div class="large-3 large-centered columns">
+  <div class="login-box">
+  <div class="row">
+  <div class="large-12 columns">
+    <form method='get' action="http://infinite-sierra-8868.herokuapp.com">
+	
+		<div class="row">
+		<div class="large-12 centered columns">
+		<img src="sek_grey.png">
+			<h1>SEKLocator login</h1>
+		</div>
+		   </div>
+       <div class="row">
+         <div class="large-12 columns">
+             <input type="text" name="username" id="username" placeholder="Username" />
+         </div>
+       </div>
+      <div class="row">
+         <div class="large-12 columns">
+             <input type="password" name="password" placeholder="Password" />
+         </div>
+      </div>
+      <div class="row">
+        <div class="large-12 large-centered columns">
+          <input type="submit" class="button expand" value="Log In"/>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</div>
+</div>	
+	
+	
+      </div>	  
+    </div>
+	
   </body>
 </html>
+
