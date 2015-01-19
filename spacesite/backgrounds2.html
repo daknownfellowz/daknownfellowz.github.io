@@ -11,20 +11,13 @@
 
 	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
 	<link rel="stylesheet" type="text/css" href="examples.css" />
-	<link href="typed_main.css" rel="stylesheet"/>
     
     <link rel="stylesheet" href="animate.min.css">
 
-	<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>-->
-	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>	
-	<script src="js/typed.js" type="text/javascript"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 
 	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
 	<script type="text/javascript">
-
-
-
-
 		var deleteLog = false;
 
 		$(document).ready(function() {
@@ -41,76 +34,59 @@
 		            'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5']
 		        }
 			});
-
-
+            
+            /*$("#spaceman").animate({zoom: '50%'});*/
 			
+			
+			 .santa {
+    width: 1000px;
+    position: absolute;
+    top: 15%;
+    left: -75%;
+    transform-origin: bottom left;
+}
+
+ .santa {
+    -webkit-animation: santa-move 1s 1s ease-out forwards;
+    animation: santa-move 1s 1s ease-out forwards;
+    -webkit-animation-duration: 26s;
+    animation-duration: 26s;
+}
+@-webkit-keyframes santa-move {
+    100% {
+        left: 100%;
+        transform: scale(2);
+    }
+}
+@keyframes santa-move {
+    100% {
+        left:100%;
+        transform: scale(2);
+    }
+}
+			
+			
+            
 	    });
-
-
-
-
-
-
-
-
-
     </script>
 
-    <script>
-
-alert('jee');
-$(function() {
-
-	  $("#section1 #typed").typed( {
-
-	  	alert('vittu');
-	    strings: ["Phrase 1", "Phrase 2"],
-	    typeSpeed: 50,
-	    backDelay: 500,
-	    loop: true,
-	    // defaults to false for infinite loop
-	    loopCount: false,
-	    callback: function() {foo();
-	    }
-
-	  });
-
-	  function foo() {console.log("Callback");}
-
-	});
-
-    /*
-    $(function(){
-
-        $("#typed").typed({
-            strings: ["Typed.js is a <strong>jQuery</strong> plugin.", "It <em>types</em> out sentences.", "And then deletes them.", "Try it out!"],
-            typeSpeed: 30,
-            backDelay: 500,
-            loop: false,
-            contentType: 'html', // or text
-            // defaults to false for infinite loop
-            loopCount: false,
-            callback: function(){ foo(); },
-            resetCallback: function() { newTyped(); }
-        });
-
-        $(".reset").click(function(){
-            $("#typed").typed('reset');
-        });
-
-    });
-
-    function newTyped(){ *//* A new typed object */ }
-/*
-    function foo(){ console.log("Callback"); } */
-
-    </script>    
-
     <style>
-       
-    body {
-    	background-color: #000000;
-    }   
+    /*
+    .pp-easing {
+        -webkit-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        -moz-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        -o-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);  */
+        /* custom */
+/*        -webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        -moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        -o-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990); */
+        /* custom */ 
+    }
+
+            
+        
         
     /* Style for our header texts
 	* --------------------------------------- */
@@ -148,7 +124,7 @@ $(function() {
 		padding: 6% 0 0 0;
 	}
 	#section3{
-		background-image: url(blackspaceAndClouds.jpg);
+		background-image: url(clearbluesky.jpg);
 		padding: 6% 0 0 0;
 	}
     #section4{
@@ -156,7 +132,7 @@ $(function() {
 		padding: 6% 0 0 0;
 	}
     #section5{
-		background-image: url(dusted_earth1.jpg);
+		background-image: url(clearbluesky.jpg);
 		padding: 6% 0 0 0;
 	}
 	#section3 h1{
@@ -165,8 +141,7 @@ $(function() {
 
 
 
-	#section1 h1,
-	#section1 p{
+	#section1 h1{
 		position: absolute;
 		left: 0;
 		right: 0;
@@ -197,116 +172,44 @@ $(function() {
 			color: #fff;
 	}
         
- 
-
+        
+    /* PILVILLE ALLAOLEVA */
     #section1 #spaceman {
-	
         background-image: url("astronaut.png");
         background-repeat: no-repeat;
-        bottom: 20px;
+        bottom: 0;
         height: 628px;
         position: absolute;
         right: 200px;
         width: 497px;
         z-index: 100;
-        		
-		/*transform-origin: bottom left;*/       
-    }
-		
-	#section1 #spaceman{
-		-webkit-animation:movingbox 15s infinite linear;
-	}		
-	
-	@-webkit-keyframes movingbox{
-/*		from{left:90%;-webkit-transform: rotate(0deg);}
-		to{left:10%;-webkit-transform: rotate(360deg);} */						
-	/*	from{left:70%;-webkit-transform: rotate(-90deg);}
-		to{left:70%;-webkit-transform: rotate(90deg);}					*/
-
-
-	    0%   {left:70%;-webkit-transform: rotate(-45deg);}
-	    50%  {left:70%;-webkit-transform: rotate(15deg);}
-	    100% {left:70%;-webkit-transform: rotate(-45deg);}
-
-	}
-		
-	
-	
-	
-	#section4 #clouds1 {	
-	    background-image: url("cloud_PNG2.png");
-        background-repeat: no-repeat;
-		height: 373px;
-		width: 685px;		
-		position: absolute;
-		top: -20px;		
-		left: 570px;
-		transform-origin: bottom left;	
-	}	
-	#section4 #clouds1 {
-		-webkit-animation:movingcloud1 45s infinite linear;
-	}		
-	@-webkit-keyframes movingcloud1 {
-		from{left:100%;-webkit-transform: transform(0deg);}
-		to{left:-70%;-webkit-transform: rotate(0deg);}					
-	}
-
-	#section4 #clouds2 {	
-	    background-image: url("cloud_PNG2.png");
-        background-repeat: no-repeat;
-		height: 373px;
-		width: 685px;		
-		position: absolute;
-		top: -30px;			
-		left: 570px;	
-		/*transform-origin: top left;	*/		        
-	}	
-	#section4 #clouds2 {				
-		-webkit-animation:movingcloud2 100s infinite linear;
-	}		
-	@-webkit-keyframes movingcloud2 {
-/*		from{left:90%;-webkit-transform: rotate(0deg);}
-		to{left:10%;-webkit-transform: rotate(360deg);} */						
-		from{left:100%;-webkit-transform: rotate(0deg);}
-		to{left:-70%;-webkit-transform: rotate(0deg);}					
-	}	
-    
-
-
-
-
-
-
-
-
-
-
-
-
-    #section5 #house {
-        background-image: url("house1.png");
-        background-repeat: no-repeat;
-        bottom: 100px;
-        height: 404px;
+        
+        /*anim: */
         position: absolute;
-        right: 140px;
-        width: 577px;
-		z-index: -1;
-    }   
-
-
-
-
-
-
-
-
-
-
-
-
+        white-space: nowrap;
+        -webkit-animation: spin 3s infinite;        
+        /*-webkit-animation: rightThenLeft 4s linear;        */
+        
+        /*animation: rightThenLeft 1s steps(10) infinite;*/
+    }
+    @-moz-keyframes spin { 
+        100% { -moz-transform: rotate(360deg); } 
+    }        
+    @-webkit-keyframes spin { 
+        0% { -webkit-transform: rotate(45deg); } 
+        100% { -webkit-transform: rotate(45deg); } 
+    }
+    @keyframes spin { 
+        100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+    }        
     
-		
+    @-webkit-keyframes rightThenLeft {
+        0%   {left: 0%;}
+        50%  {left: 100%;}
+        100% {left: 0%;}
+    }        
+        
+        
         
     #section1 #spaceman2 {
         background-image: url("astronauts_cable.png");
@@ -329,39 +232,15 @@ $(function() {
         width: 497px;
     } 
         
-    #section2 #station {
+    #section2 #colors {
         background-image: url("spacestation.png");
         background-repeat: no-repeat;
-        top: 260px;
-        height: 430px;
+        top: 360px;
+        /*height: 413px;*/
         position: absolute;
         right: 140px;
         width: 330px;
-    }
-
-	#section2 #station{
-		-webkit-animation:movingstation 30s infinite linear;
-	}		
-	
-	@-webkit-keyframes movingstation {
-/*		from{left:90%;-webkit-transform: rotate(0deg);}
-		to{left:10%;-webkit-transform: rotate(360deg);} */						
-	/*	from{left:70%;-webkit-transform: rotate(-90deg);}
-		to{left:70%;-webkit-transform: rotate(90deg);}					*/
-
-
-	    0%   {left:70%;-webkit-transform: rotate(0deg);}
-	    50%  {left:70%;-webkit-transform: rotate(15deg);}
-	    100% {left:70%;-webkit-transform: rotate(-45deg);}
-
-	}
-
-
-
-
-
-
-
+    }        
         
     pos_fixed {
         position: fixed;
@@ -377,20 +256,6 @@ $(function() {
     }
 
         
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </style>
 
 </head>
@@ -406,25 +271,13 @@ $(function() {
 
 	<div id="pagepiling">
 	    <div class="section" id="section1">
-
-	    	<div class="type-wrap"><span id="typed"></span></div>
             <div id="spaceman"></div>
             <div id="spaceman2"></div>
 	    	<h1>Anssi Syrjälä</h1>
-
-
-	    	<!-- ## TYPED! ## -->
-	    	<div class="type-wrap"><span id="typed"></span></div>
-
-	        <!--<div class="type-wrap">
-	            <span id="typed" style="white-space:pre;"></span>
-	        </div>  -->
-
-
 	    </div>
 	    <div class="section" id="section2">
             <div id="spaceman3"></div>
-            <div id="station"></div>
+            <div id="colors"></div>
 	    	<div class="intro">
 	    		<!-- <h1>Backgrounds </h1> -->
 	    		<p><br>Front End development, Back End development, UX and usability, graphics. No problem.</p>
@@ -440,17 +293,15 @@ $(function() {
 	    	<h1>Portfolio continues...</h1>
 			<p>Some examples of my different types work or past projects...</p>
             <!-- <div class="#box"> -->
-			<div id="clouds1"></div>
-			<div id="clouds2"></div>
+			<img STYLE="position:absolute; TOP:375px; LEFT:570px;" src="cloud_PNG2.png" alt="pagePiling" />
             <!--</div>-->
 			<br />
 	    </div>
         
         <div class="section" id="section5">        
 	    	<div class="intro">
-	    		<h1>Contact</h1>				
+	    		<h1>Contact</h1>
 	    		<p>I'm currently looking for new challenges related to eg. frontend/full stack development, UX or lead developer positions. Please feel free to contact me.</p>
-				<div id="house"></div>
 	    	</div>
 	    </div>
 	</div>
