@@ -1,0 +1,168 @@
+/*body {
+    background-color: #ffe07c;
+    margin: 0;
+    padding: 0;
+    border: none;
+}*/
+/*
+.container {
+    width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+    background: #1f3133;
+    min-height: 200px;
+} */
+
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+        .brand {
+            background: url("img/allekirj_logo_punamusta.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+            height: 109px;
+            overflow: hidden;
+            padding: 0;
+            text-indent: 100%;
+            white-space: nowrap;
+            width: 260px;
+        }
+        
+		.btn-primary {
+            background-color: #fc0df8; /* #4bf; */
+            border-color: #4bf; /*#357ebd;*/
+            color: #fff;
+        }
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary.focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open > .dropdown-toggle.btn-primary {
+            color: #fff;
+            background-color: #4bf;
+            border-color: #4bf;
+        }
+		
+		        #nav{
+            position:fixed;
+            background: rgba(0,0,0, 0.5);
+            right: 10px;
+            top: 10p;
+        }
+
+        #nav a{
+            color: white;
+        }
+
+
+.heading1 {
+    text-shadow: 1px 1px 2px #fff;
+    color: #FC0DF8;
+	font-style: italic;
+    text-align: center;
+    font-size: 48px;
+}
+
+input[type="text"] {  
+    background: #BDAEC6; /* #f3c245;*/
+    border: 1px solid #9C8AA5;
+    height: 50px;
+    width: 100%; /*94%;*/
+    padding: 5px 3%;
+    line-height: 30px;
+    font-size: 30px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+
+
+input[type=text].comment, .comment {
+	/*background: #BDAEC6;*/
+    border: 1px solid #9C8AA5;  /*#ffe07c;*/
+    height: 20px;
+    width: 100%; /* 95%; *
+    /*padding: 1px 3%;*/
+    /*line-height: 30px;*/
+    font-size: 12px;
+    border-radius: 5px;
+    /*margin-bottom: 20px;*/
+       /* These three lines are for transparency in all browsers. */
+       -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+       filter: alpha(opacity=50);
+       opacity:.5;
+}
+
+input[type="checkbox"] {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background: url("img/check_radio_sheet.png") left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background: url("img/check_radio_sheet.png") left top no-repeat;
+    cursor:pointer;
+}
+input[type="checkbox"]:checked + label span {
+    background:url("img/check_radio_sheet.png") -19px top no-repeat;
+}
+
+
+input[type="text"]:focus {
+    outline: 0;
+    border: 1px solid #421C52; /* #f69a39;     */
+}
+
+.addToList {
+    display: block;
+    margin: 0 auto 20px auto;
+    height: 36px;
+    width: 160px;
+    font-size: 20px;
+    color: #1f3133;
+    border-radius: 3px;
+    background: #e5e5e5; /* Old browsers */
+    background: -moz-linear-gradient(top, #e5e5e5 0%, #efefef 20%, #f5f5f5 40%, #fafafa 50%, #efefef 51%, #efefef 83%, #dfdfdf 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(20%,#efefef), color-stop(40%,#f5f5f5), color-stop(50%,#fafafa), color-stop(51%,#efefef), color-stop(83%,#efefef), color-stop(100%,#dfdfdf)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top, #e5e5e5 0%,#efefef 20%,#f5f5f5 40%,#fafafa 50%,#efefef 51%,#efefef 83%,#dfdfdf 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top, #e5e5e5 0%,#efefef 20%,#f5f5f5 40%,#fafafa 50%,#efefef 51%,#efefef 83%,#dfdfdf 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top, #e5e5e5 0%,#efefef 20%,#f5f5f5 40%,#fafafa 50%,#efefef 51%,#efefef 83%,#dfdfdf 100%); /* IE10+ */
+    background: linear-gradient(to bottom, #e5e5e5 0%,#efefef 20%,#f5f5f5 40%,#fafafa 50%,#efefef 51%,#efefef 83%,#dfdfdf 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#dfdfdf',GradientType=0 ); /* IE6-9 */
+}
+
+.input {    
+	background: #BDAEC6; /* #f3c245;*/
+    margin-bottom: 5px;
+    padding: 3px 10px;
+    border: 1px #9C8AA5;
+	border-radius: 5px;
+    border-radius: 2px;
+}
+
+.info {
+padding-left:0;
+text-align: center;
+    color: white;
+    font-family: "Helvetica", "Verdana", Arial;
+    font-size: 80%;
+}
+
+.info li {
+padding-left:0;
+    margin-bottom: 5px;
+}
