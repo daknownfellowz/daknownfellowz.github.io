@@ -1,0 +1,259 @@
+<html xmlns:wicket="http://wicket.apache.org"><head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="Content-Language" content="fi">
+		<meta http-equiv="Cache-Control" content="no-cache">
+		<meta http-equiv="Pragma" content="no-cache">
+		<meta http-equiv="Expires" content="-1">
+	    <title wicket:id="pagetitle">Numeroalueiden hallinta</title>
+	    <!--[if !IE]><!-->
+		<link rel="stylesheet" type="text/css" href="Asiakkaan%20laskutussaannot_2_files/nam_structure.css" wicket:id="nam_structure"> 
+		<link rel="stylesheet" type="text/css" href="Asiakkaan%20laskutussaannot_2_files/nam_styles.css" wicket:id="nam_styles"> 
+ 		<!--<![endif]-->
+ 		
+ 		<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="../../../../../../../../resources/com.stonesoft.venus.veclient.webpages.NamBillingRuleConfigurationEditPage/css/nam_structure_IE.css" wicket:id="nam_structure_IE"/> 
+		<link rel="stylesheet" type="text/css" href="../../../../../../../../resources/com.stonesoft.venus.veclient.webpages.NamBillingRuleConfigurationEditPage/css/nam_styles_IE.css" wicket:id="nam_styles_IE"/> 
+		<![endif]-->
+
+		<!--[if !IE 7]><style type="text/css">#wrap {display:table;height:100%}</style><![endif]-->
+	<script type="text/javascript" src="Asiakkaan%20laskutussaannot_2_files/wicket-event.js"></script>
+<script type="text/javascript" src="Asiakkaan%20laskutussaannot_2_files/wicket-ajax.js"></script>
+<script type="text/javascript" src="Asiakkaan%20laskutussaannot_2_files/wicket-ajax-debug.js"></script>
+<script type="text/javascript" id="wicket-ajax-debug-enable"><!--/*--><![CDATA[/*><!--*/
+wicketAjaxDebugEnable=true;
+/*-->]]>*/</script>
+
+</head>
+	<body>
+	<!--	<div id="minHeight"></div>  -->  <!--Dummy float for Opera and IE8-->
+		    
+			<script id="com-stonesoft-venus-veclient-webpages-NamAdminPage-0" type="text/javascript">
+				 window.onload = setupFunc;
+				 
+				 function setupFunc() {
+				   document.getElementsByTagName('body')[0].onclick = clickFunc;
+				   hideBusysign();
+				         Wicket.Ajax.registerPreCallHandler(showBusysign);
+				         Wicket.Ajax.registerPostCallHandler(hideBusysign);
+				         Wicket.Ajax.registerFailureHandler(hideBusysign);
+				 }
+				 
+				 function hideBusysign() {
+				   document.getElementById('bysy_indicator').style.display ='none';				          
+				 }
+				 
+				 function showBusysign() {
+				   document.getElementById('bysy_indicator').style.display ='inline';				      				      
+				 }
+				 
+				 function clickFunc(eventData) {
+				   var clickedElement = (window.event) ? event.srcElement : eventData.target;
+				   
+				   // var theClass = clickedElement.className;  // "this" is the element clicked
+				   // if class is 'selector' do not show onload icon
+				   
+				   if (clickedElement.tagName.toUpperCase() == 'BUTTON' || (((clickedElement.tagName.toUpperCase() == 'A' || clickedElement.parentNode.tagName.toUpperCase() == 'A') && clickedElement.className != 'selector') && clickedElement.name != 'noBusyIndicator')
+				     || (clickedElement.tagName.toUpperCase() == 'INPUT' && (clickedElement.type.toUpperCase() == 'BUTTON' || clickedElement.type.toUpperCase() == 'SUBMIT') || (clickedElement.type.toUpperCase() == 'IMAGE' && clickedElement.name != 'createCsvReportButton'))) {
+				     showBusysign();
+				   }
+				 } 
+			</script>   
+		<script type="text/javascript" src="Asiakkaan%20laskutussaannot_2_files/wicket-event.js"></script>
+<script type="text/javascript" src="Asiakkaan%20laskutussaannot_2_files/wicket-ajax.js"></script>
+<script type="text/javascript" src="Asiakkaan%20laskutussaannot_2_files/wicket-ajax-debug.js"></script>
+<script type="text/javascript" id="wicket-ajax-debug-enable"><!--/*--><![CDATA[/*><!--*/
+wicketAjaxDebugEnable=true;
+/*-->]]>*/</script>
+
+
+		<div id="wrap">
+			<nav id="mainnav">
+						
+				<table>
+				<tbody><tr><td style="align: left; vertical-align: middle;" align="left"> 
+			
+				<h1 id="logo" class="alignleft"><a title="xxxxxx" href="http://www.xxxxxx.fi/"><div id="logo"></div></a></h1>
+				
+				</td><td style="align: left; vertical-align: top;" align="left"> 
+								
+				<!-- naviPath -->        
+		 		<div id="navi_path" wicket:id="naviPath"><wicket:panel>
+		    
+		    <ul class="tabs tabs--minimal" wicket:id="myPath"><li id="navsubs" class="mainsection current_page_item"><a class="tabs__anchor" href="http://localhost:7701/front/v9.0/NamBillingRuleConfigurationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">HELSINGIN KAUPUNKI - Asiakkaan laskutussäännöt</a></li><li id="navsubs" class="mainsection"><a class="tabs__anchor" href="http://localhost:7701/front/?wicket:interface=:1:navigationPanel:link_logout::ILinkListener::">Kirjaudu ulos</a></li></ul>
+			
+			<div class="main is-state-b2c "></div>
+			
+		</wicket:panel></div>
+		 		
+   		 		</td></tr>
+				</tbody></table>  
+		 		
+			</nav>
+			<div id="maincontent">
+				<!--  subNavi = left navigation panel  -->	
+				<div id="sub_navi" wicket:id="subNavi"><wicket:panel>
+			<div class="sidebar">
+			    <!--  style="position: relative; left: 10px;"  -->
+			  <ul wicket:id="subNavi"><li><a href="http://localhost:7701/front/v9.0/NamProductConfigurationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Laskutettavien tuotteiden hallinta</a></li><li><p><b>HELSINGIN KAUPUNKI</b></p></li><li><a href="http://localhost:7701/front/v9.0/NamCustomerInformationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Asiakkaan NAM-tiedot</a></li><li class="active"><a href="http://localhost:7701/front/v9.0/NamBillingRuleConfigurationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Asiakkaan laskutussäännöt</a></li><li><a href="http://localhost:7701/front/v9.0/NamProductCustomizationPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Asiakkaan tuotteiden hallinta</a></li><li><a href="http://localhost:7701/front/v9.0/NamAdminPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Ohivalintanumeroiden hallinta</a></li><li><a href="http://localhost:7701/front/v9.0/NamMassChangePage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Ohivalintanumeroiden massamuokkaus</a></li><li><a href="http://localhost:7701/front/v9.0/NamJointNumberPage/customer_name/HELSINGIN+KAUPUNKI/customer_id/555326/">Koontinumeroiden hallinta</a></li></ul>
+			</div>
+		</wicket:panel></div>
+				<div style="display: none;" id="bysy_indicator"><img id="indicatorImg210" src="Asiakkaan%20laskutussaannot_2_files/indicator.gif" wicket:id="indicatorImg"> &nbsp; <span wicket:id="loadingIndicatorText">Haetaan tietoja...</span></div>
+				<!-- <div id="bysy_indicator" style="display: none"> -->
+				<!-- <div id="bysy_indicator" style="display: none; margin-top: 80px;"><img src="" wicket:id="indicatorImg" /> &nbsp; Haetaan tietoja...</div> -->
+				<!-- wicket page -->
+				<div id="content"><wicket:child><wicket:extend>
+	<form id="searchform211" action="../../../../../../../../?wicket:interface=:14:searchform::IFormSubmitListener::" method="post" wicket:id="searchform"><div style="display:none"><input name="searchform211_hf_0" id="searchform211_hf_0" type="hidden"></div>
+	<span wicket:id="feedback"><wicket:panel>
+  
+</wicket:panel></span>
+
+	<div class="datatabbedpanel">
+	
+	  <div class="data_row" style="margin-top: 0px; margin-bottom: -10px;">			
+		 <input src_active="/front/images/TAKAISIN_primary_13_active.png" id="dSubmit" src_hover="/front/images/TAKAISIN_primary_13_hover.png" style="position: relative; right: 0px;" name="backButton" value="foo" onclick="$(document).ready(function() { $('form').submit(function() { if(typeof jQuery.data(this, 'disabledOnSubmit') == 'undefined') { jQuery.data(this, 'disabledOnSubmit', { submited: true }); $('input[type=submit], input[type=button]', this).each(function() { $(this).attr('disabled', 'disabled'); });return true; } else{ return false;}}); });" src="Asiakkaan%20laskutussaannot_2_files/TAKAISIN_primary_13_normal.png" wicket:id="backButton" type="image">						
+  	  </div>
+	
+   	  <div class="data">
+
+	  <table class="tbl_list" style="width: auto; min-width: 0; display:table;">
+	    <tbody><tr>
+		    <th wicket:id="headers">
+		        <span wicket:id="header">Päätuotteet</span> &nbsp;<img id="icon213" title="Voit valita yhden valinnan tähän kategoriaan" src="Asiakkaan%20laskutussaannot_2_files/icon_one.png" wicket:id="icon">
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Liittymätyyppi</span> &nbsp;<img id="icon214" title="Voit valita yhden valinnan tähän kategoriaan" src="Asiakkaan%20laskutussaannot_2_files/icon_one.png" wicket:id="icon">
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Puhepaketit</span> &nbsp;<img id="icon215" title="Voit valita yhden tai useamman valinnan tähän kategoriaan" src="Asiakkaan%20laskutussaannot_2_files/icon_multiple.png" wicket:id="icon">
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Päätelaitteet</span> &nbsp;<img id="icon216" title="Voit valita yhden tai useamman valinnan tähän kategoriaan" src="Asiakkaan%20laskutussaannot_2_files/icon_multiple.png" wicket:id="icon">
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Lisäpalvelut</span> &nbsp;<img id="icon217" title="Voit valita yhden valinnan tähän kategoriaan" src="Asiakkaan%20laskutussaannot_2_files/icon_one.png" wicket:id="icon">
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Lisäpalvelut 2</span> &nbsp;<img id="icon218" title="Voit valita yhden valinnan tähän kategoriaan" src="Asiakkaan%20laskutussaannot_2_files/icon_one.png" wicket:id="icon">
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Salainen numero</span> &nbsp;<img id="icon219" title="Voit valita yhden valinnan tähän kategoriaan" src="Asiakkaan%20laskutussaannot_2_files/icon_one.png" wicket:id="icon">
+		    </th><th wicket:id="headers">
+		        <span wicket:id="header">Käyttäjäprofiili</span> &nbsp;<img id="icon21a" title="Voit valita yhden valinnan tähän kategoriaan" src="Asiakkaan%20laskutussaannot_2_files/icon_one.png" wicket:id="icon">
+		    </th>
+	    </tr>
+	    	     
+	    <tr>
+	        <td wicket:id="nested">
+	          <span wicket:id="value"></span> 
+	          <select id="component21b" name="nested:0:component" onchange="var wcall=wicketAjaxPost('../../../../../../../../?wicket:interface=:14:searchform:nested:0:component::IBehaviorListener:0:8', wicketSerialize(Wicket.$('component21b')),null,null, function() {return Wicket.$('component21b') != null;}.bind(this));" wicket:id="component" size="30">
+<option value="0">*</option>
+<option selected="selected" value="1">Avaya CIU välitysyhteys</option>
+<option value="2">GSM</option>
+<option value="3">Grand Theft Auto V</option>
+<option value="4">PöytäGSM</option>
+<option value="5">SIPP</option>
+</select>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value"></span> 
+	          <select id="component21c" name="nested:1:component" onchange="var wcall=wicketAjaxPost('../../../../../../../../?wicket:interface=:14:searchform:nested:1:component::IBehaviorListener:0:8', wicketSerialize(Wicket.$('component21c')),null,null, function() {return Wicket.$('component21c') != null;}.bind(this));" wicket:id="component" size="30">
+<option value="0">*</option>
+<option value="1">GSM-liittymä</option>
+<option value="2">Muu</option>
+<option selected="selected" value="3">xxxxxx vuokraliittymä (laskutetaan)</option>
+<option value="4">xxxxxxn vuokrajohto</option>
+<option value="5">xxxxxxn vuokraliittymä</option>
+<option value="6">Vaihdeliittymä</option>
+</select>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value"></span> 
+	          <select id="component21d" name="nested:2:component" multiple="multiple" onchange="var wcall=wicketAjaxPost('../../../../../../../../?wicket:interface=:14:searchform:nested:2:component::IBehaviorListener:0:8', wicketSerialize(Wicket.$('component21d')),null,null, function() {return Wicket.$('component21d') != null;}.bind(this));" wicket:id="component" size="30">
+<option value="0">*</option>
+<option value="1">Puhepaketti B</option>
+<option value="2">Puhepaketti C</option>
+<option value="3">Puhepaketti D</option>
+</select>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value"></span> 
+	          <select id="component21e" name="nested:3:component" multiple="multiple" onchange="var wcall=wicketAjaxPost('../../../../../../../../?wicket:interface=:14:searchform:nested:3:component::IBehaviorListener:0:8', wicketSerialize(Wicket.$('component21e')),null,null, function() {return Wicket.$('component21e') != null;}.bind(this));" wicket:id="component" size="30">
+<option value="0">*</option>
+<option value="1">Analoginen(ana)</option>
+<option selected="selected" value="2">Analoginen(ana) (laskutetaan)</option>
+<option value="3">Datalaite(modem)</option>
+<option value="4">Digitaalinen(digi)</option>
+<option value="5">Faksi(faksi)</option>
+<option value="6">GSM(gsm)</option>
+<option value="7">Haamunumero(haamu)</option>
+<option value="8">Hissihälytys(hissi)</option>
+<option value="9">Hätäpuhelin(Hätä)</option>
+<option value="10">I2004(9025002)</option>
+<option value="11">Jononumero(jono)</option>
+<option value="12">Kutsunumero(Kutsu)</option>
+<option value="13">LVI-hälytys(LVI)</option>
+<option value="14">M3902(9023259)</option>
+<option value="15">M3903(9023264)</option>
+<option value="16">M3904(9023270)</option>
+<option value="17">Modeemi(modem)</option>
+<option value="18">Murtohälytys(murto)</option>
+<option value="19">Palohälytys(palo)</option>
+<option value="20">Puheposti(mail)</option>
+<option value="21">Pöytä GSM(tablegsm)</option>
+<option value="22">Ryhmäsoitto(ryhmä)</option>
+<option value="23">Tiedotelaite(m1ran)</option>
+<option value="24">Vaihdepöytä(Ops)</option>
+<option value="25">Vastausrinki(rinki)</option>
+<option value="26">vhr-dummy(dummy)</option>
+<option value="27">vhr-phantom(phantom)</option>
+</select>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value"></span> 
+	          <select id="component21f" name="nested:4:component" onchange="var wcall=wicketAjaxPost('../../../../../../../../?wicket:interface=:14:searchform:nested:4:component::IBehaviorListener:0:8', wicketSerialize(Wicket.$('component21f')),null,null, function() {return Wicket.$('component21f') != null;}.bind(this));" wicket:id="component" size="30">
+<option value="0">*</option>
+<option value="1">ACD-jonoraportti</option>
+<option selected="selected" value="2">Agenttinäyttö ylläpito</option>
+<option value="3">Lisäjonotiedote</option>
+<option value="4">Puheposti</option>
+<option value="5">Ryhmäkutsu</option>
+</select>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value"></span> 
+	          <select id="component220" name="nested:5:component" onchange="var wcall=wicketAjaxPost('../../../../../../../../?wicket:interface=:14:searchform:nested:5:component::IBehaviorListener:0:8', wicketSerialize(Wicket.$('component220')),null,null, function() {return Wicket.$('component220') != null;}.bind(this));" wicket:id="component" size="30">
+<option value="0">*</option>
+<option value="1">ACD-jonoraportti</option>
+<option selected="selected" value="2">Agentin Sähköpostikanava</option>
+<option value="3">Lisäjonotiedote</option>
+<option value="4">Puheposti</option>
+<option value="5">Ryhmäkutsu</option>
+</select>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value"></span> 
+	          <select id="component221" name="nested:6:component" onchange="var wcall=wicketAjaxPost('../../../../../../../../?wicket:interface=:14:searchform:nested:6:component::IBehaviorListener:0:8', wicketSerialize(Wicket.$('component221')),null,null, function() {return Wicket.$('component221') != null;}.bind(this));" wicket:id="component" size="30">
+<option value="0">*</option>
+<option selected="selected" value="1">Salainen numero</option>
+</select>
+	        </td><td wicket:id="nested">
+	          <span wicket:id="value"></span> 
+	          <select id="component222" name="nested:7:component" onchange="var wcall=wicketAjaxPost('../../../../../../../../?wicket:interface=:14:searchform:nested:7:component::IBehaviorListener:0:8', wicketSerialize(Wicket.$('component222')),null,null, function() {return Wicket.$('component222') != null;}.bind(this));" wicket:id="component" size="30">
+<option value="0">*</option>
+<option selected="selected" value="1">Avaya Attendant</option>
+<option value="2">Peruskäyttäjä Analog</option>
+<option value="3">Toiminnekäyttäjä Digi</option>
+</select>
+	        </td>
+	    </tr>
+	  </tbody></table>
+   						    	
+	  </div>				
+	
+	</div>  
+		   
+	<div class="data" style="padding-top: 10px; overflow: hidden">
+		<div id="buttons" class="tabbedpanelbuttons" style="display: inline;">
+			<input src_active="/front/images/TALLENNA_primary_13_active.png" id="dSubmit" src_hover="/front/images/TALLENNA_primary_13_hover.png" style="position: relative; right: 0px;" name="saveButton" value="foo" onclick="$(document).ready(function() { $('form').submit(function() { if(typeof jQuery.data(this, 'disabledOnSubmit') == 'undefined') { jQuery.data(this, 'disabledOnSubmit', { submited: true }); $('input[type=submit], input[type=button]', this).each(function() { $(this).attr('disabled', 'disabled'); });return true; } else{ return false;}}); });" src="Asiakkaan%20laskutussaannot_2_files/TALLENNA_primary_13_normal.png" wicket:id="saveButton" type="image">			
+		</div>
+	</div>		
+	
+  </form> 
+</wicket:extend></wicket:child></div>
+			</div>
+			
+		</div> 
+				
+		<div id="footer2">
+			<div id="legal" class="clear"><span wicket:id="footertext">Copyright xxxxxxxxxxxx. xxxxxx on xxxxxxxxxxxx Finland Oyj:n rekisteröimä tavaramerkki.</span></div>
+		</div>	
+	
+<div><div style="width: 450px; display: none; position: absolute; left: 200px; top: 300px; z-index: 1000000;" id="wicketAjaxDebugWindow">	<div style="border: 1px solid black; padding: 1px; background-color: #eee">		<div style="overflow: auto; width: 100%">			<div style="float: right; padding: 0.2em; padding-right: 1em; color: black;">               <a href="javascript:WicketAjaxDebug.switchScrollLock()" id="wicketAjaxDebugScrollLock" style="color:blue" onfocus="this.blur();">scroll lock</a> |				<a href="javascript:WicketAjaxDebug.clearLog()" style="color:blue">clear</a> | 				<a href="javascript:WicketAjaxDebug.hideDebugWindow()" style="color:blue">close</a>			</div>			<div id="wicketAjaxDebugWindowDragHandle" style="padding: 0.2em; background-color: gray; color: white; padding-left: 1em; margin-right: 14em; cursor: move;">				Wicket Ajax Debug Window (drag me here)			</div>			<div id="wicketAjaxDebugWindowLogId" style="width: 100%; height: 200px; background-color: white; color: black; overflow: auto; white-space: nowrap">			</div>           <div style="height: 10px; margin:0px; padding:0px;overflow:hidden;">              <div style="height: 10px; width: 10px; background-color: gray; margin:0px; padding: 0px;overflow:hidden; float:right; cursor: nw-resize" id="wicketAjaxDebugWindowResizeHandle">              </div>           </div>		</div>	</div></div><a id="wicketDebugLink" style="position:fixed; right: 10px; bottom: 10px; z-index:1000000; padding-top: 0.3em; padding-bottom: 0.3em; line-height: normal ; _padding-top: 0em; width: 12em; border: 1px solid black; background-color: white; text-align: center; opacity: 0.7;  color: blue;" href="javascript:WicketAjaxDebug.showDebugWindow()">WICKET AJAX DEBUG</a></div></body></html>

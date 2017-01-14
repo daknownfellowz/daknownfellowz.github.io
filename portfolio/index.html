@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- <link rel="icon" href="../../favicon.ico"> -->
+
+    <title>Portfolio - Anssi Syrjälä</title>
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+
+    <style type="text/css">
+
+        html {
+            background: #000000;
+        }  
+
+        h1 {
+            color: #4bf;
+        }
+
+        a {
+            font-weight: bold;
+        }
+
+        li {list-style-type: none;}
+
+        .brand {
+            background: url("img/allekirj_logo_punamusta.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+            height: 109px;
+            overflow: hidden;
+            padding: 0;
+            text-indent: 100%;
+            white-space: nowrap;
+            width: 260px;
+        }
+        .navbar {
+            background-color: #000000;
+            /*margin: 20px;*/
+        }
+
+        .navbar-inverse .navbar-nav > li > a:hover {
+            -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            -moz-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            background-color: #4bf;
+            color: #fff7b6;
+        }
+        .navbar-inverse .navbar-nav > .active > a:hover {
+            -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            -moz-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            background-color: #4bf;
+            color: #fff7b6;
+        }
+        .navbar-inverse .navbar-nav > .disabled > a:hover{
+            -webkit-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            -moz-box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            box-shadow: inset 0 0 0 rgba(0, 0, 0, 0);
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            background-color: #4bf;
+            color: #fff7b6;
+        }
+
+        .btn-primary {
+            background-color: #4bf;
+            border-color: #4bf; /*#357ebd;*/
+            color: #fff;
+        }
+        .btn-primary:hover,
+        .btn-primary:focus,
+        .btn-primary.focus,
+        .btn-primary:active,
+        .btn-primary.active,
+        .open > .dropdown-toggle.btn-primary {
+            color: #fff;
+            background-color: #4bf;
+            border-color: #4bf;
+        }
+
+        .testimonial {
+            color: #808080;
+            font-size: 24px;
+            padding-bottom: 20px;
+            text-align: center;
+        }
+
+        .footer {
+            background-color: #000000;
+            color: #4bf;
+            margin-top: 30px;
+            padding: 50px 0;
+            box-shadow: 0 0 35px #000000;
+        }
+
+        body {
+            color: #5a5a5a;
+            padding-bottom: 0;
+        }
+		
+		/* shadow for images  */
+		.shadowed {
+			box-shadow: 20px 20px 50px #ccc;
+		}
+        .shadowed-light {
+            box-shadow: 2px 2px 70px #403e3e;
+        }
+		
+		.carousel-control:hover { cursor: pointer; }
+
+        #nav{
+            position:fixed;
+            background: rgba(0,0,0, 0.5);
+            right: 10px;
+            top: 10p;
+        }
+
+        #nav a{
+            color: white;
+        }
+
+    </style>
+	
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	
+	<script>
+	$(function() {
+	
+	  $('a[href*=#]').not("[href=#], [href=#myCarousel]").click(function() {
+
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+
+	  });
+	});
+	</script> 
+	
+</head>
+
+<!-- NAVBAR -->
+<body>
+
+<section id="top">
+<div class="navbar-wrapper">
+    <div class="container">
+
+        <nav class="navbar navbar-inverse navbar-static-top shadowed-light" role="navigation">
+            <div class="container"> <!-- CONTAINER -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+					
+                    <img src="img/allekirj_logo_punamusta.jpg">					
+
+                    <a class="navbar-brand" href="#"></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+    </div>
+</div>
+</section>
+
+<!-- Carousel  -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel"> 
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="slide-01_new.jpg">
+            <div class="container">
+                <div class="carousel-caption">
+
+                    <div class="row" style="margin-left: 100px; margin-right: 100px">
+                        <div class="testimonial row col-lg-10">
+                            <h1>Anssi Syrjälä</h1>
+							Full stack developer (code/web dev/ux/gfx) based in Helsinki, Finland
+                        </div>
+
+                        <div class="button col-lg-2 visible-lg">         <!-- box-shadow: 20px 10px 55px #4F4E4F; -->
+                            <img src="img/oktoberfest14_200px.jpg" class="shadowed-light visible-lg" style="width: 200px">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="slide-02_new.jpg">
+            <div class="container">
+                <div class="carousel-caption">
+					<div class="testimonial row col-lg-12">
+                    <h1>Need a creative frontend developer with an eye for UI?</h1>					
+					<p>
+					<ul>
+					<li>HTML5, CSS3, JavaScript and frameworks eg. jQuery, Bootstrap, AngularJS</li>
+					<li>Motivated, willing to learn what I don't know</li>
+					</ul>
+					</p>
+					</div>
+
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="slide-03_new.jpg">
+            <div class="container">
+                <div class="carousel-caption">
+					<div class="testimonial row col-lg-12">
+                    <h1>Looking for Scrum/Kanban process knowledge?</h1>
+					<p>
+					<ul>
+					<li>Scrum Master experience</li>
+					<li>Methodologies: Scrum, Kanban and ITIL</li>
+					<li>People skills</p>
+					</ul>
+					</p>
+
+				    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div><!-- /.carousel -->
+
+
+<div class="container">
+
+    <div class="testimonial col-lg-12">
+        <div class="testimonial">
+        <img src="img/oktoberfest14_200px.jpg" class="shadowed-light visible-sm visible-md" style="width: 200px; height: auto; float: right">
+        <p style="margin: 0 0 10px;">Front End development, Back End development, UX and usability, graphics. No problem.</p>
+            <a class="btn btn-lg btn-primary" role="button" href="mailto:anssi.syrjala@gmail.com">
+            <span class="glyphicon glyphicon-envelope" style="vertical-align: baseline"></span>&nbsp; Send mail</a>
+        </div>
+    </div>    
+    
+    
+    <hr>
+</div>
+
+
+<section id="portfolio">
+<div class="container">
+    <div class="row" style="margin-left: 100px; margin-right: 100px">
+        <div class="testimonial row col-lg-12">
+        <h1>Portfolio</h1>
+        <small>This web site is built with Bootstrap and jQuery and presents responsive design. Below are some examples of my different types work or past projects.</small>
+
+                <h1><span class="glyphicon glyphicon-cog"></span>
+
+                <span class="glyphicon glyphicon-pencil"></span>
+
+                <span class="glyphicon glyphicon-picture"></span>
+                <span class="glyphicon glyphicon-user"></span>
+
+                <span class="glyphicon glyphicon-certificate"></span>
+
+                <span class="glyphicon glyphicon-list-alt"></span></h1>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container marketing">
+
+    <!-- Three columns of text below the carousel  try-->
+    <div class="row">
+        
+        <!-- space -->
+        <div class="col-lg-4">
+            <img class="img-thumbnail shadowed" src="img/space_portfolio_280x280.jpg" alt="New portfolio site 2015" style="width: 140px; height: 140px;">
+            <h3>New portfolio site 2015</h3>
+            <p>New portfolio site containing CSS3 animations etc. Inspired by scifi movies eg. Interstellar. Still work in progress though.</p>
+            <p><a class="btn btn-default" href="../spacesite/index.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->        
+        
+        <div class="col-lg-4">
+            <img class="img-thumbnail shadowed" src="img/basket_280x280.jpg" alt="Basket" style="width: 140px; height: 140px;">
+            <h3>Basket site</h3>
+            <p>Basket - A Shopping list single-page application made with JavaScript/jQuery.</p>
+            <p><a class="btn btn-default" href="../basket/index.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->       
+        <!--
+        <div class="col-lg-3">
+            <img class="img-thumbnail shadowed" src="img/matopeli_280x280.jpg" alt="HTML5 worm" style="width: 140px; height: 140px;">
+            <h3>JavaScript worm game</h3>
+            <p>Memories from Nokia's golden era. Worm game done with JavaScript/jQuery and HTML5 canvas. Controls: keyboard cursor keys.</p>
+            <p><a class="btn btn-default" href="../html5worm.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+	<!--
+        <div class="col-lg-3"> 
+            <img class="img-thumbnail shadowed" src="img/nam_280x280.jpg" alt="Service/product mgmt tool for teleoperator" style="width: 140px; height: 140px;">
+            <h3>Service/product mgmt tool for one major teleoperator</h3>
+            <p>More user friendly UI to outdated tool. Done with Java and Wicket framework. Static html demo. <b style="color: red;">Red links are clickable</b>. 2013-2014.
+                For comparison: <a href="img/outdated_namui.png" target="_blank" role="button">old outdated UI</a>.
+            <p><a class="btn btn-default" href="NAM_kalit/numeroalueiden_hallinta_1.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+	</div>
+
+    <div class="row">        
+
+        <div class="col-lg-3">
+            <img class="img-thumbnail shadowed" src="../spacesite/img/seklocator_280x280.png" alt="HTML5 worm" style="width: 140px; height: 140px;">
+            <h3>HTML5 Geolocation example</h3>          
+            <p>Framework used: Foundation. Dummy login done with NodeJS, hardcoded: sek123/sek123. Press "Share location" when browser asks for it.</p> 
+            <p><a class="btn btn-default" href="../seklocator/index.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
+        </div>    
+
+        <div class="col-lg-3"> 
+            <img class="img-thumbnail shadowed" src="img/saunalahti_puhelinkauppa_280x280.jpg" alt="Saunalahti web shop" style="width: 140px; height: 140px;">
+            <h3>Saunalahti Web Shop</h3>
+            <p>Saunalahti web shop from year 2007-2008. Done with Java and Freemarker with a bit JavaScript in shopping basket implementation.
+            Mobile phone grid is dynamically generated from database data. Static html page saved from Wayback machine site.</p>
+
+            <p><a class="btn btn-default" href="img/saunalahti_puhelinkauppa.jpg" target="_blank" role="button">Open screen shot &raquo;</a></p>
+        </div>
+
+        <div class="col-lg-3">
+            <img class="img-thumbnail shadowed" src="img/eon_280x280.jpg" alt="E.ON Finland Internet site 2005" style="width: 140px; height: 140px;">
+            <h3>E.ON Finland's Internet site renewal</h3>
+            <p>Renewed (static) Internet site for E.ON Finland consisting new hierarchy and also content in some areas. Layout was done according to E.ON's style manual. There was no decent state in Wayback machine so here
+            is just PhotoShop layout scetch from my specification. 2005.</p>
+            <p><a class="btn btn-default" href="img/eon_luonnostelma.jpg" target="_blank" role="button">Open scetch screen shot &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+    
+    
+        <div class="col-lg-3">
+            <img class="img-thumbnail shadowed" src="img/skynet_280x280.jpg" alt="Skynet" style="width: 140px; height: 140px;">
+            <h3>Skynet</h3>
+            <p>Skynet was a collaboration site for our entourage back in the days 2005-2007. Good old times before Facebook. Site was done with PHP. As a sneak peek here is a static/non fully working front page from the golden era of Skynet.</p>
+            <p><a class="btn btn-default" href="skynet/index.html" target="_blank" role="button">Open in new tab &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+
+	</div>
+
+    <div class="row">        
+				
+		
+        <div class="col-lg-3">
+            <h3>Raaka päivä (short film)</h3>
+            <div>
+			<!--
+                <iframe src="http:////www.youtube.com/embed/Nn60LPKCjOw" height="215" width="320" allowfullscreen="" frameborder="0"></iframe>
+			-->	<!--<iframe width="420" height="315" src="//www.youtube-nocookie.com/embed/Nn60LPKCjOw" frameborder="0" allowfullscreen></iframe>-->
+			
+			<iframe id="ytplayer" type="text/html" width="420" height="315" src="http://www.youtube-nocookie.com/embed/Nn60LPKCjOw?fs=1" frameborder="0" allowfullscreen></iframe>
+				
+            </div>
+            <p>Raaka Päivä short film, 2002. Film was made at Multimedia course at Haaga-Helia polytechnic school. Edited with Adobe Premiere.</p>
+        </div>
+
+    </div><!-- /.row -->
+
+    <hr>
+</section>
+
+</div>
+
+<section id="contact">
+    <div class="container">
+        <div class="row" style="margin-left: 100px; margin-right: 100px">
+            <div class="testimonial row col-lg-12">
+                <h1>Contact</h1>
+                <small>I'm currently looking for new challenges related to eg. frontend/full stack development, UX or lead developer positions. Please feel free to contact me.</small>
+                <br>
+                <h3><a href="CV_AnssiSyrjala.pdf"><span class="glyphicon glyphicon-floppy-save"></span> CV</a>
+
+                    &nbsp;&nbsp; <a href="https://www.linkedin.com/profile/view?id=31670836" target="_blank"><img src="img/linkedin-icon.png" style="width: 30px; vertical-align: baseline"> LinkedIn</a>&nbsp;
+
+                </h3>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="testimonial row col-lg-12">
+                <img class="shadowed" src="img/map_helsinki2.png" alt="This is where we are">
+            </div>
+        </div>
+        <div class="row">
+            <!--<div class="testimonial row col-lg-12"> -->
+
+                <div class="testimonial col-lg-12">
+                    <div class="small">
+                    <address>
+                        Anssi Syrjälä<br>
+                        Residence: Helsinki, Finland<br>
+                        <abbr title="Phone">P.</abbr> (+358) 40-1726693 <br>
+                        <abbr title="Mail">mail</abbr> anssi.syrjala[at]gmail.com
+                    </address>
+                        <a class="btn btn-lg btn-primary" role="button" href="mailto:anssi.syrjala@gmail.com">
+                        <span class="glyphicon glyphicon-envelope" style="vertical-align: baseline"></span>&nbsp; Send mail</a>
+                    </div>
+                </div>
+
+
+				<!--
+                <div class="button span3">
+                    <a class="btn btn-primary btn-block btn-order" href="mailto:anssi.syrjala@gmail.com">Send mail</a>
+                    <small>anssi.syrjala@gmail.com</small>
+                </div> -->
+            <!--</div>-->
+        </div>
+    </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="container" style="margin-bottom: 0px">
+
+        <p class="pull-right" style="text-align: right; color: #9d9d9d"><a href="#top">Back to top</a>
+            <br><br>
+            <a href="https://www.linkedin.com/profile/view?id=31670836" target="_blank"><img src="img/linkedin-icon.png" width="50px"></a>&nbsp;
+            <a href="https://www.facebook.com/anssi.syrjala" target="_blank"><img src="img/facebook-icon.png" width="50px"></a>
+        </p>
+        <p style="color: #9d9d9d">Copyright &copy; 2014 Anssi Syrjälä</p>
+
+        </div><!-- /.container -->
+
+    </footer>
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/bootstrap.min.31.js"></script>
+
+</body>
+</html>

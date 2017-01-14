@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<xmlticker>
+<pause>3000</pause>
+<message>SAAPUMISAIKATAULU:</message>
+<message>Maanantai 18.7.: Uusikaupunki, Hotelli Lannentie</message>
+<message>Tiistai 19.7.: Pori, Hotel Amado</message>
+<message>Keskiviikko 20.7.: Pori, Hostel Buisto Ky</message>
+<message>Torstai 21.7.: Kristiinankaupunki, Pukinsaari Camping</message>
+<message>Perjantai 22.7.: Vaasa, Omenahotelli</message>
+<message>Lauantai 23.7.: Tampere, Omenahotelli</message>
+<message>Sunnuntai 24.7.: Helsinki, himaan</message>
+</xmlticker>

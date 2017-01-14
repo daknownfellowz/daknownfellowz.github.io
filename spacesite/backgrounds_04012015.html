@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>pagePiling.js plugin - Backgrounds</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="pagePiling.js plugin by Alvaro Trigo." />
+	<meta name="keywords"  content="pile,piling,piling.js,stack,pages,scrolling,stacking,touch,fullpile,scroll,plugin,jquery" />
+	<meta name="Resource-type" content="Document" />
+
+	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+	<link rel="stylesheet" type="text/css" href="examples.css" />
+    
+    <link rel="stylesheet" href="animate.min.css">
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+	<script type="text/javascript">
+		var deleteLog = false;
+
+		$(document).ready(function() {
+            
+            //$('#section1 #spaceman').addClass('animated bounceOutLeft');
+            
+	    	$('#pagepiling').pagepiling({
+	    		menu: '#menu',
+	    		anchors: ['page1', 'page2', 'page3', 'page4', 'page5'],
+	    		navigation: {
+		            'textColor': '#f2f2f2',
+		            'bulletsColor': '#ccc',
+		            'position': 'right',
+		            'tooltips': ['Page 1', 'Page 2', 'Page 3', 'Page 4', 'Page 5']
+		        }
+			});
+            
+            /*$("#spaceman").animate({zoom: '50%'});*/
+            
+	    });
+    </script>
+
+    <style>
+    
+    .pp-easing {
+        -webkit-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        -moz-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        -o-transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        transition: all 3000ms cubic-bezier(0.550, 0.085, 0.000, 0.990);  
+        /* custom */
+        -webkit-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        -moz-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        -o-transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990);
+        transition-timing-function: cubic-bezier(0.550, 0.085, 0.000, 0.990); 
+        /* custom */ 
+    }
+
+            
+        
+        
+    /* Style for our header texts
+	* --------------------------------------- */
+	h1{
+		font-size: 5em;
+		font-family: arial,helvetica;
+		color: #fff;
+		margin:0;
+		padding:0;
+	}
+
+	/* Centered texts in each section
+	* --------------------------------------- */
+	.section{
+		text-align:center;
+	}
+
+
+	/* Backgrounds will cover all the section
+	* --------------------------------------- */
+	#section1,
+	#section2,
+    #section3,
+	#section4{
+		background-size: cover;
+	}
+
+	/* Defining each section background and styles
+	* --------------------------------------- */
+	#section1{
+		background-image: url(blackspace00000.jpg); 
+	}
+	#section2{
+		background-image: url(blackspace00000.jpg); /*   Earth_and_Moon_1920.jpg);  */
+		padding: 6% 0 0 0;
+	}
+	#section3{
+		background-image: url(clearbluesky.jpg);
+		padding: 6% 0 0 0;
+	}
+    #section4{
+		background-image: url(clearbluesky.jpg);
+		padding: 6% 0 0 0;
+	}
+    #section5{
+		background-image: url(clearbluesky.jpg);
+		padding: 6% 0 0 0;
+	}
+	#section3 h1{
+		color: #000;
+	}
+
+
+
+	#section1 h1{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 30px;
+		color: #fff;
+	}
+
+	#section2 .intro{
+		position: absolute;
+		left: 0;
+		right: 0;
+		margin: 0 auto;
+		top: 30px;
+	}
+	#section2 h1,
+	#section2 p{
+		text-shadow: 1px 5px 20px #000;
+	}
+
+	#section3 h1,
+	#section3 p{
+		text-shadow: 1px 5px 20px #000;
+		color: #fff;
+	}
+
+	#infoMenu li a{
+			color: #fff;
+	}
+        
+        
+    /* PILVILLE ALLAOLEVA */
+    #section1 #spaceman {
+        background-image: url("astronaut.png");
+        background-repeat: no-repeat;
+        bottom: 0;
+        height: 628px;
+        position: absolute;
+        right: 200px;
+        width: 497px;
+        z-index: 100;
+
+        transform: scale(1.5) rotate(-5deg) translate(50px,30px); 
+        
+        /*anim: */
+        /*position: absolute;
+        white-space: nowrap;
+        -webkit-animation: spin 3s infinite;        */
+        /*-webkit-animation: rightThenLeft 4s linear;        */
+        
+        /*animation: rightThenLeft 1s steps(10) infinite;*/
+    }
+    /*
+    @-moz-keyframes spin { 
+        100% { -moz-transform: rotate(360deg); } 
+    }        
+    @-webkit-keyframes spin { 
+        0% { -webkit-transform: rotate(45deg); } 
+        100% { -webkit-transform: rotate(45deg); } 
+    }
+    @keyframes spin { 
+        100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } 
+    }        
+    
+    @-webkit-keyframes rightThenLeft {
+        0%   {left: 0%;}
+        50%  {left: 100%;}
+        100% {left: 0%;}
+    }        
+        
+      */  
+        
+    #section1 #spaceman2 {
+        background-image: url("astronauts_cable.png");
+        background-repeat: no-repeat;
+        bottom: 0;
+        height: 628px;
+        position: absolute;
+        right: 200px;
+        width: 497px;
+        z-index: 10;
+    }       
+        
+    #section2 #spaceman3 {
+        background-image: url("astronauts_cable2.png");
+        background-repeat: no-repeat;
+        top: 0;
+        height: 628px;
+        position: absolute;
+        right: 200px;
+        width: 497px;
+    } 
+        
+    #section2 #colors {
+        background-image: url("spacestation.png");
+        background-repeat: no-repeat;
+        top: 360px;
+        /*height: 413px;*/
+        position: absolute;
+        right: 140px;
+        width: 330px;
+    }        
+        
+    pos_fixed {
+        position: fixed;
+        top: 30px;
+        right: 5px;
+        color: red;
+    }
+    #box {
+        height: 100%;
+        max-height: 100%;
+        overflow: auto;
+        width: 100%;
+    }
+
+        
+    </style>
+
+</head>
+<body>
+
+	<ul id="menu">
+		<li data-menuanchor="page1" class="active"><a href="#page1">About</a></li>
+		<li data-menuanchor="page2"><a href="#page2">About 2</a></li>
+		<li data-menuanchor="page3"><a href="#page3">Portfolio</a></li>
+        <li data-menuanchor="page4"><a href="#page4">Portfolio 2</a></li>
+        <li data-menuanchor="page5"><a href="#page5">Contact</a></li>
+	</ul>
+
+	<div id="pagepiling">
+	    <div class="section" id="section1">
+            <div id="spaceman"></div>
+            <div id="spaceman2"></div>
+	    	<h1>Anssi Syrjälä</h1>
+	    </div>
+	    <div class="section" id="section2">
+            <div id="spaceman3"></div>
+            <div id="colors"></div>
+	    	<div class="intro">
+	    		<!-- <h1>Backgrounds </h1> -->
+	    		<p><br>Front End development, Back End development, UX and usability, graphics. No problem.</p>
+	    	</div>
+	    </div>
+	    <div class="section" id="section3">
+	    	<div class="intro">
+	    		<h1>Portfolio</h1>
+	    		<p>Some examples of my different types work or past projects...</p>
+	    	</div>
+	    </div>
+        <div class="section" id="section4">
+	    	<h1>Portfolio continues...</h1>
+			<p>Some examples of my different types work or past projects...</p>
+            <!-- <div class="#box"> -->
+			<img STYLE="position:absolute; TOP:375px; LEFT:570px;" src="cloud_PNG2.png" alt="pagePiling" />
+            <!--</div>-->
+			<br />
+	    </div>
+        
+        <div class="section" id="section5">        
+	    	<div class="intro">
+	    		<h1>Contact</h1>
+	    		<p>I'm currently looking for new challenges related to eg. frontend/full stack development, UX or lead developer positions. Please feel free to contact me.</p>
+	    	</div>
+	    </div>
+	</div>
+
+</body>
+</html>

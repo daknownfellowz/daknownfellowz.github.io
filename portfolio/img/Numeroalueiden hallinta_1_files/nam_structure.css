@@ -1,0 +1,244 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#main {	
+	width:100%;
+	margin-left:30px;
+	margin-top:10px;
+}
+
+#main2 {
+	/*width:1135px;*/
+	width:100%;
+	margin-left:30px;
+	margin-top:10px;
+}
+
+
+div#page-top {
+    height: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 940px;
+}
+
+/*#header {
+	height:65px;
+	width:100%;	
+	}*/
+	
+	
+#logo {padding:25px 50px 0px 50px; }
+#top_right {float:right; width:350px;}
+			
+#navi {
+	height:23px;
+	width:935px;
+	}
+
+#logout {}
+	
+#content_area {
+	width:100%; 
+	margin-top:0px;
+}
+	
+.start  {}
+.end {}
+
+#sub_navi { 
+	float: left;
+	min-height: 100%;
+	height: 400px;
+	padding-top: 93px;
+	width: 300px;  
+}
+ 
+#content {
+	float: none;
+    padding-top: 73px;
+    width: 75%;
+    height: auto !important;
+    min-height: 600px; 
+    height: 600px;  /* for cross browser compatibility twice */
+}
+
+#content .start {}
+#content .end {height:11px;}
+#frontpage {}
+#search {width:0px;}
+
+/* Ajax tabbed panel */
+div.tabpanel div.tab-row {	
+  line-height:normal;
+}
+
+div.tabpanel div.tab-row li {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  list-style-type: none;
+}
+
+div.tabpanel div.tab-row a:link,
+ div.tabpanel div.tab-row a:visited {
+  float: left;
+  background: #f3f3f3;
+  font-size: 12px;
+  line-height: 14px;
+  font-weight: bold;
+  padding: 2px 10px 2px 10px;
+  margin-right: -1px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  background-image: url('nam_tab_bg.png'); background-repeat: repeat; background-color: #fff;  
+  color: #652D86;  
+  padding: 10px;
+  text-align: center;
+  vertical-align: top;
+}
+
+div.tabpanel div.tab-row li.selected a:link,
+ div.tabpanel div.tab-row a:visited.active {  
+  background: #E4E3E1;  
+  color: #404040;
+}
+
+div.tabpanel div.tab-row a:hover {
+  background: #fff;
+}
+ 
+/* Ajax tabbed panel end */
+
+#bysy_indicator {
+  display: none;
+  position: 'absolute';
+  float: left;     
+  margin-top: 85px;
+  margin-left:auto;
+  margin-right:auto;     
+  z-index: 5000;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1em;  
+}
+
+.tbl_list {
+	float:left;
+	width: 100%;
+	margin:0;
+	background-color:#ffffff;
+	border: 1px solid #cccccc;	
+	font-family: "Helvetica Neue",Arial,sans-serif;
+    font-size: 13px;
+    border-collapse: collapse;
+}
+.tbl_list th {
+	text-align: left;
+	font-size:95%;
+	padding:5px;
+	padding-left:10px;
+	font-weight:bold;
+	border:0px;
+}
+.tbl_list td {
+	padding:5px;
+	padding-left:10px;
+	font-size:95%;
+	border:0px; 			
+}
+.dark {
+	background-color: #EEEDEA;	
+	padding:5px;
+	padding-left:10px;
+	border:0px;	
+}
+
+.tbl_list th a {
+	font-weight:bold;
+}
+.tbl_list .button {
+	margin-top:5px;
+}
+.hdl_with_help {
+	position:relative;
+	width:100%;
+}
+	
+#wrap {min-height: 100%;}	
+	
+#maincontent {
+	/* overflow:auto;  */   /*  <- this brings somehow horizontal navi in NamCustomerInformationPage  */
+	padding-bottom: 0px; /*35px;*/ /* 22px; */ /* must be same height as the footer */
+	padding-top: 73px;
+}  
+
+#footer2 {
+/* 
+    height: 22px;
+	position: absolute;
+  	left: 0;
+    right: 0;  
+	text-align: center;  
+    background: url("images/nam_footer_bg.png"); repeat-x scroll 0 0 rgba(0, 0, 0, 0); 
+	color: #FFFFFF;	 	
+    width: 100%;	
+*/    
+    
+	background: url("nam_footer_bg.png") repeat-x scroll 0 0 #6D4187;
+    color: #FFFFFF;
+    margin-top: 10px;
+    overflow: visible;
+    text-align: center;
+    width: 100%;    
+    
+    height: 27px;
+}
+#legal {
+    padding: 5px 0;
+}
+.clear {
+    clear: both;
+}
+
+
+/*
+#footer2 a {
+    color: #DCD0E3;
+    float: right;
+    margin: 0 10px;
+}
+
+div#footer2 div.content {
+    margin: 0 auto;
+    width: 100%;   
+}
+
+div#footer2 div.copyright {
+    float: left;
+    font-size: 0.9em;
+    padding: 4px 2px;
+    width: 530px;
+    margin-left: 300px;
+}
+
+div#footer2 div.links {
+    float: left;
+    font-size: 0.9em;
+    padding: 4px 2px;
+    width: 300px;
+    margin-left: 25px;    
+}*/
+
+/*Opera Fix*/
+body:before {
+	content:"";
+	height:100%;
+	float:left;
+	width:0;
+	margin-top:-32767px;
+}	
