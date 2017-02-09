@@ -57,6 +57,23 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
+                        <a href="booking.html">Booking</a>
+                    </li>				
+                    <li>
+                        <a href="management.html">Management</a>
+                    </li>
+					<li>
+                        <a href="touring.html">Touring</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="contact.html">Contact</a>
+                    </li>
+					
+				<!--
+                    <li>
                         <a href="index.html">Home / Talent</a>
                     </li>
                     <li>
@@ -68,6 +85,7 @@
                     <li>
                         <a href="contact.html">Contact</a>
                     </li>
+					-->
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -114,23 +132,147 @@
  <!--   <div class="row">-->
 <div class="container">
 
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+		
+		<h3>TOURING</h3>
+		
+		<!--<br><h4>Gigs</h4><br>-->
 
+		<br>
+	</div>
+   </div>
     
    <div class="row">
         <div class=" col-lg-offset-2 col-md-10 col-md-offset-1"> 
 			
 			
-        <!-- space -->
-        <div class="col-lg-4">
-            <a href="" data-toggle="modal" data-target="#secondLevelModal"><img class="img-thumbnail shadowed" src="img/TST_home_talent.jpg" alt="The Second Level" style="width: 250px; height: 250px;"></a>
-            <h3><a href="" data-toggle="modal" data-target="#secondLevelModal">THE SECOND LEVEL</a></h3>
-        </div><!-- /.col-lg-4 -->        
-        
-        <div class="col-lg-4">
-            <a href="" data-toggle="modal" data-target="#kiroModal"><img class="img-thumbnail shadowed" src="img/KIRO_home_talent.jpg" alt="Kiro" style="width: 250px; height: 250px;"></a>
- 
-            <h3><a href="" data-toggle="modal" data-target="#kiroModal">KIRO</a></h3>          
-        </div><!-- /.col-lg-4 -->       
+    <div class="agenda">
+        <div class="table-responsive">
+            <table class="table table-condensed table-bordered">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Time</th>
+						<th>City & Location</th>
+                        <th>Event</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Single event in a single day -->
+                    <tr>
+                        <td class="agenda-date" class="active" rowspan="1">
+                            <div class="dayofmonth">11</div>
+                            <div class="dayofweek">Lauantai</div>
+                            <div class="shortdate text-muted">Helmikuu, 2017</div>
+                        </td>
+                        <td class="agenda-time">
+                            21:30
+                        </td>
+						<td class="agenda-time">
+                            Helsinki, The Capital
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i> 
+                                EDM Kickstart '17!
+                            </div>
+                        </td>
+                    </tr>
+                    
+                    <!-- Multiple events in a single day (note the rowspan) -->
+                    <tr>
+                        <td class="agenda-date" class="active" rowspan="3">
+                            <div class="dayofmonth">24</div>
+                            <div class="dayofweek">Torstai</div>
+                            <div class="shortdate text-muted">Maaliskuu, 2017</div>
+                        </td>
+                        <td class="agenda-time">
+                            18:00 - 19:00 
+                        </td>
+						<td class="agenda-time">
+                            Helsinki, The Circus
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Event 1
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="agenda-time">
+                            21:15 - 23:00 
+                        </td>
+						<td class="agenda-time">
+                            Helsinki, The Circus
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Event 2
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="agenda-time">
+                            23:00 - 24:00
+                        </td>
+						<td class="agenda-time">
+                            Helsinki, The Circus
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                Ending ceremony
+                            </div>
+                        </td>
+                    </tr>
+					
+					<!-- Single event in a single day -->
+                    <tr>
+                        <td class="agenda-date" class="active" rowspan="1">
+                            <div class="dayofmonth">11</div>
+                            <div class="dayofweek">Lauantai</div>
+                            <div class="shortdate text-muted">Toukokuu, 2017</div>
+                        </td>
+                        <td class="agenda-time">
+                            20:30
+                        </td>
+						<td class="agenda-time">
+                            Helsinki, The Circus
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                <i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i> 
+                                EDM takeaway!
+                            </div>
+                        </td>
+                    </tr>	
+
+					<!-- Single event in a single day -->
+                    <tr>
+                        <td class="agenda-date" class="active" rowspan="1">
+                            <div class="dayofmonth">21</div>
+                            <div class="dayofweek">Lauantai</div>
+                            <div class="shortdate text-muted">Kesäkuu, 2017</div>
+                        </td>
+                        <td class="agenda-time">
+                            20:30
+                        </td>
+						<td class="agenda-time">
+                            Helsinki, The Circus
+                        </td>
+                        <td class="agenda-events">
+                            <div class="agenda-event">
+                                <!--<i class="glyphicon glyphicon-repeat text-muted" title="Repeating event"></i> -->
+                                EDM shitters!
+                            </div>
+                        </td>
+                    </tr>					
+					
+					
+                </tbody>
+            </table>
+        </div>
+    </div>     
 
       </div>
    </div>
@@ -191,8 +333,10 @@
         <img src="img/Kiro_logo_transp_web.png" alt="Kiro logo" style="width: 250px;">
 	</div>
 
-	<p style="position:relative; top:-10px;"><h4>Biography</h4><br>   
-	KIRO is one of the most interesting upcoming “EDM” artists in Finland. Also known as a platinum-selling pop producer, Kiro releases melodic house music as an artist himself. KIRO’s style could be described to take place somewhere between names such as Galantis, Don Diablo, and Sigala. His first original tracks are awaited to be released during the early 2017. Although the originals are still being in progress, KIRO has released remixes to introduce his personal sound to the world.</p>
+	<p style="position:relative; top:-10px;"><h4>Biography</h4><br>
+	KIRO is one of the most interesting upcoming DJ/producers from Finland. Also known as a platinum-selling pop producer in Finland, Kiro releases melodic house music as an artist himself. KIRO’s style could be described to draw influence from Galantis, Don Diablo, and Sigala. His first original tracks are ready to be released in 2017 and he has a number of great remixes under his belt.
+    <br><br>
+	KIRO has already performed for a big crowd at his home town Jyväskylä where he took the stage in front of 7000 people at one of the biggest student events at the local exhibition hall. More memorable performances are on their way as KIRO prepares himself for festival, clubs and various shows in Finland and abroad. His show is energetic and well excecuted combining visuals and fresh music in the mix.</p>
 	
 	<p><a href="http://www.facebook.com/kiroshere" target="_blank">www.facebook.com/kiroshere</a><br> 
 	<a href="http://www.instagram.com/kiroshere" target="_blank">www.instagram.com/kiroshere</a><br> 
@@ -245,7 +389,7 @@
                         </li>
                     </ul>
                     <p class="copyright text-muted">Copyright &copy; Xtended Music Agency 2016</p>
-		    <p class="copyright text-muted">Site designed by Anssi Syrjälä</p>
+		    <p class="copyright text-muted" style="font-size: 70%">Site designed by Anssi Syrjälä</p>
                 </div>
             </div>
         </div>
