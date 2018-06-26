@@ -1,0 +1,587 @@
+AWSTATS DATA FILE 6.6 (build 1.887)
+# If you remove this file, all statistics for date 201106 will be lost/reset.
+
+# Position (offset in bytes) in this file of beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1864                
+POS_TIME 2526                
+POS_VISITOR 9345                
+POS_DAY 14924               
+POS_DOMAIN 3293                
+POS_LOGIN 3524                
+POS_ROBOT 3679                
+POS_WORMS 4319                
+POS_EMAILSENDER 4450                
+POS_EMAILRECEIVER 4593                
+POS_SESSION 15652               
+POS_SIDER 15826               
+POS_FILETYPES 4728                
+POS_OS 4852                
+POS_BROWSER 5053                
+POS_SCREENSIZE 5500                
+POS_UNKNOWNREFERER 5574                
+POS_UNKNOWNREFERERBROWSER 6083                
+POS_ORIGIN 6285                
+POS_SEREFERRALS 6424                
+POS_PAGEREFS 6602                
+POS_SEARCHWORDS 8305                
+POS_KEYWORDS 8518                
+POS_MISC 2190                
+POS_ERRORS 8640                
+POS_CLUSTER 3380                
+POS_SIDER_404 8742                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20110701012655 7 1199 10393138477209
+FirstTime 0
+LastTime 20110629184552
+LastUpdate 20110701042237 7 0 6 0 0
+TotalVisits 126                 
+TotalUnique 37                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 198                 
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 3 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 9 13 281132 17 17 35252
+1 15 20 374685 16 18 49070
+2 22 23 163363 18 19 21463
+3 19 20 149401 12 14 21963
+4 14 16 187106 8 8 15606
+5 3 3 13962 4 4 9936
+6 13 19 95969 14 14 34666
+7 8 8 37232 10 10 20466
+8 3 5 126604 5 5 10278
+9 10 14 290440 8 8 15444
+10 6 10 271824 11 11 29430
+11 8 21 829907 10 12 25540
+12 9 35 905495 19 21 51413
+13 14 40 827669 26 26 64361
+14 16 32 654052 32 33 64625
+15 5 20 937895 34 37 44096
+16 15 32 715027 26 27 62662
+17 17 33 989089 26 26 55706
+18 16 28 740535 21 22 32003
+19 14 23 555497 25 25 59400
+20 16 35 1174555 32 33 70649
+21 8 19 649523 18 18 31476
+22 17 30 806164 18 20 40877
+23 10 26 1022140 32 32 57034
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 287 525 12799266
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 15
+baiduspider 56 239557 20110630164149 0
+mj12bot 54 251316 20110630010314 0
+yandex 35 144274 20110629141301 0
+findlinks 10 46540 20110628125822 0
+voila 8 37232 20110628053155 0
+nutch 8 37232 20110625022652 0
+googlebot 6 18616 20110630180616 0
+\wbot[\/\-] 5 13962 20110626005142 0
+slurp 4 14390 20110622121544 0
+powermarks 2 9308 20110616131825 0
+spider 2 0 20110623235320 0
+surveybot 2 9308 20110630152618 0
+msnbot\-media 2 7150 20110627115359 0
+netcraft 1 4654 20110606234220 0
+robot 2 9308 20110627140739 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 4
+css 10 22869 0 0
+html 287 1298466 0 0
+jpg 207 11435799 0 0
+gif 21 42132 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 16
+winxp 217
+winlong 59
+winnt 87
+win2000 33
+symbian 1
+linuxubuntu 1
+win98 2
+linux 11
+linuxfedora 2
+winme 7
+win16 3
+macosx 19
+win95 11
+wince 3
+win2003 12
+Unknown 57
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 31
+msie6.0 143
+firefox5.0 7
+msie5.01 1
+firefox4.0.1 56
+opera 69
+firefox4.0 1
+msie4.01 1
+firefox3.6.17 16
+firefox3.6.16 2
+firefox3.0.11 1
+msie5.5 14
+firefox3.5.3 3
+msie3.02 3
+firefox3.6.15 1
+netscape4.79 1
+netscape4.76 3
+msie8.0 33
+netscape0.6 5
+mozilla 7
+firefox1.0 1
+netscape0.91 3
+msie7.0 19
+msie2.0 4
+firefox3.6.3 3
+firefox3.5.19 5
+msie5.0 4
+wget 1
+msie9.0 3
+Unknown 43
+safari 64
+firefox3.6.13 8
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 7
+Mozilla/5.0_(compatible;_Ezooms/1.0;_ezooms.bot@gmail.com) 20110614163231
+Mozilla/0.6_Beta_(Windows) 20110614224457
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20110627011451
+cmsworldmap.com 20110602153457
+Mozilla/0.91_Beta_(Windows) 20110613173210
+Wget/1.11.4_Red_Hat_modified 20110604221609
+Mozilla/4.0_(compatible;_http://search.thunderstone.com/texis/websearch/about.html) 20110627070442
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 2
+facebookexternalhit/1.0_(_http://www.facebook.com/externalhit_uatext.php) 20110627011451
+cmsworldmap.com 20110602153457
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 53 97
+From1 0 0
+From2 10 15
+From3 223 368
+From4 1 45
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 3
+google 2 7
+rambler 6 6
+yandex 2 2
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 48
+http://webreader.info 15 15
+http://site47.ru 15 15
+http://newsbussines.ru 12 12
+http://www.blog-igry.ru 12 12
+http://qseo.net 11 11
+http://warezsklad.ru 9 9
+http://pincode.mobi 9 9
+http://myforecasts.ru 9 9
+http://www.muzobzor.org 9 9
+http://uageology.ru 6 6
+http://irc-galleria.net/community/3386021-30-seconds-to-mars-kilpailu-tallinna-2162011 0 24
+http://irc-galleria.net/community/3386021 0 120
+http://www.x-treme.fi/tapahtumat/uutiset/189.dsp 1 1
+http://irc-galleria.net/channel.php 0 1
+http://celebrates.net 3 3
+http://lifephilosophy.ru 2 2
+http://podrabotka5.com 3 3
+http://kinomne.ru 3 3
+http://ruhealth.1bb.ru 3 3
+http://lifephilosophy.ru/news.php 3 3
+http://byteplanet.ru 3 3
+http://www.health.yoread.ru/news.php 3 3
+http://uastih.ru/news.php 6 6
+http://healthels.0bb.ru 3 3
+http://uglovyekompyuternyestoly.ru 6 6
+http://fishing-talk.com 3 3
+http://ruastronomy.ru/news.php 6 6
+http://uascience.ru/news.php 3 3
+http://www.mikseri.net/clubs/thread.php 1 1
+http://tamadavkazani.ru 3 3
+http://www.otvetnemail.ru 6 6
+http://rubrains.ru/news.php 3 3
+http://bizexperts.ru 3 3
+http://uageology.ru/news.php 3 3
+http://www.internet-zarabotok.net 3 3
+http://www.soulcast.com/post/show/1062623/Zygors-Guide-:-A-Quick-Assessment 1 1
+http://delavan.mybb.by 3 3
+http://pugachev.net 3 3
+http://www.pechenuka.ru 6 6
+http://goldfilm.in 3 3
+http://okku.ru 3 3
+http://bobrovnet.com 3 3
+http://rucalk.ru/news.php 6 6
+http://iremaker.info 3 3
+http://spacience.ru 3 3
+http://kak-udalit-sebya-iz-odnoklassnikov.kak.tel 3 3
+http://segol.ru 3 3
+http://sbrg.vndv.com 3 3
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 3
+xtendedmusic.com 2
+xtendedmusic+productions 1
+xtendetmusic 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 4
+xtendedmusic.com 2
+productions 1
+xtendetmusic 1
+xtendedmusic 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 2
+302 83 27959
+404 180 52610
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 8
+/CHANGELOG.txt 1 -
+/robots.txt 169 -
+/pinkparty/pinkparty.htm 3 -
+/plugins/editors/tinymce/jscripts/tiny_mce/plugins/tinybrowser/upload.php 1 -
+/umbraco/css/umbracoGui.css 1 -
+/misc/tabledrag.js 1 -
+/sitecore/login 1 -
+/GGTrack_TeaserFX_Final_001.divx 3 http://www.mikseri.net/clubs/thread.php
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 198
+92.249.127.111 105 105 488670 20110618145043
+193.106.136.49 63 63 293202 20110613090809
+193.106.136.40 26 26 121004 20110615205708
+193.106.136.56 20 20 93080 20110618203406
+193.106.136.33 12 12 55848 20110604032144
+174.129.117.237 7 7 0 20110623171818
+208.80.194.29 6 6 27924 20110627172808
+208.80.194.37 6 6 27924 20110629184552
+208.80.194.35 4 4 18616 20110621094859
+208.80.194.34 4 4 18616 20110625071137
+80.223.220.150 0 1 60975 
+109.232.86.111 0 1 60975 
+80.223.107.189 0 1 60975 
+91.153.192.133 0 1 60975 
+87.95.95.139 0 1 60975 
+84.251.157.141 0 2 121950 
+130.234.204.232 0 1 60975 
+193.209.10.3 0 1 60975 
+208.80.194.30 1 1 4654 20110619034211
+69.58.178.58 2 2 9308 20110613204047
+88.195.59.136 0 1 60975 
+69.63.189.248 0 2 121950 
+84.249.160.80 0 1 60975 
+85.134.93.93 0 1 60975 
+69.171.228.249 0 1 60975 
+84.248.165.140 0 1 60975 
+87.95.98.231 0 1 60975 
+50.16.2.57 1 1 4654 20110609124522
+91.155.82.158 0 1 60975 
+84.248.59.200 0 1 60975 
+109.240.55.22 0 1 60975 
+88.114.118.252 0 1 60975 
+91.152.74.159 0 1 60975 
+85.156.199.173 0 1 60975 
+193.184.63.210 2 14 40121 20110610130838
+208.80.194.32 1 1 4654 20110623184445
+91.154.216.201 0 1 60975 
+69.171.224.246 0 4 243900 
+82.181.196.190 0 1 60975 
+212.226.4.51 0 1 60975 
+84.248.130.157 0 1 0 
+69.171.228.248 0 1 60975 
+66.220.158.247 0 1 60975 
+85.156.128.216 0 1 60975 
+109.240.238.106 0 1 60975 
+85.77.85.77 0 1 60975 
+66.220.146.249 0 1 60975 
+66.220.149.248 0 2 121950 
+84.248.18.246 0 1 60975 
+220.181.19.81 2 2 9308 20110619133620
+88.148.240.192 0 1 60975 
+62.78.166.239 0 1 60975 
+88.195.184.18 0 2 121950 
+82.181.45.66 0 3 121950 
+66.220.158.248 0 1 60975 
+69.171.224.249 0 1 60975 
+89.27.0.133 0 2 121950 
+91.155.163.41 0 1 60975 
+208.80.194.27 1 1 4654 20110609134233
+81.175.230.13 0 1 60975 
+213.139.176.246 0 1 60975 
+46.73.206.161 1 2 7195 20110606215823
+83.150.115.251 0 1 60975 
+188.67.88.159 0 1 0 
+85.78.89.213 0 1 60975 
+193.65.25.99 0 1 60975 
+69.171.224.248 0 1 60975 
+87.100.172.207 0 1 60975 
+84.251.40.52 0 1 0 
+62.106.13.49 0 1 60975 
+88.194.214.117 0 1 60975 
+108.80.226.142 1 1 4654 20110604221609
+70.59.126.251 1 7 40121 20110611164755
+83.102.66.63 0 1 60975 
+85.77.32.55 0 1 60975 
+80.221.17.138 0 1 60975 
+204.45.210.24 1 1 4654 20110610013446
+66.220.149.247 0 1 60975 
+69.171.224.250 0 1 60975 
+88.114.31.22 0 4 243900 
+46.73.128.189 1 2 7195 20110619194838
+80.222.57.43 0 1 60975 
+85.157.6.160 0 1 60975 
+88.112.80.113 1 7 40121 20110614065346
+88.115.179.164 0 1 60975 
+88.112.80.139 0 1 60975 
+193.167.222.176 0 1 60975 
+87.95.120.189 0 1 60975 
+85.77.140.138 0 1 60975 
+80.223.141.150 0 1 60975 
+80.220.227.43 0 1 60975 
+77.109.224.66 0 1 60975 
+87.236.228.4 0 1 60975 
+69.171.224.251 0 1 60975 
+62.73.56.50 0 1 60975 
+213.130.252.248 0 1 60975 
+188.238.201.132 0 1 60975 
+88.114.40.121 0 1 60975 
+69.171.228.246 0 1 60975 
+80.221.156.81 0 1 60975 
+88.112.89.59 0 1 60975 
+87.100.184.35 0 1 60975 
+193.184.119.2 0 1 60975 
+84.250.40.213 0 1 60975 
+188.238.35.88 0 1 60975 
+91.121.181.147 1 1 4654 20110621005154
+87.93.201.227 0 1 60975 
+84.249.71.195 0 1 60975 
+84.231.57.104 0 1 60975 
+109.70.163.66 1 7 40121 20110627125225
+62.106.55.51 0 1 60975 
+87.93.77.26 0 1 60975 
+74.52.245.146 1 1 4654 20110613230914
+88.115.253.200 0 1 60975 
+69.171.224.245 0 4 243900 
+81.17.197.14 0 1 60975 
+188.238.187.165 0 1 60975 
+81.17.198.26 1 7 40121 20110620140145
+109.240.24.230 0 1 60975 
+88.195.240.204 0 1 60975 
+91.145.125.35 0 1 60975 
+82.181.44.65 0 2 121950 
+80.222.116.220 0 1 60975 
+62.241.244.28 0 1 60975 
+91.154.98.135 0 1 60975 
+88.112.71.196 0 1 60975 
+91.153.56.222 0 1 60975 
+88.194.169.144 0 1 60975 
+109.230.213.192 1 1 4654 20110629070924
+85.76.36.66 0 1 60975 
+188.238.145.143 0 1 60975 
+81.223.254.34 1 1 4654 20110618044640
+94.22.29.44 0 1 60975 
+69.171.228.247 0 2 121950 
+84.251.89.32 0 1 60975 
+82.181.24.115 0 1 60975 
+69.171.228.251 0 2 121950 
+69.63.189.245 0 1 60975 
+88.115.93.253 0 1 60975 
+84.249.141.36 0 1 60975 
+109.108.17.92 0 1 60975 
+69.171.224.244 0 2 121950 
+208.80.194.28 2 2 9308 20110608040305
+188.40.124.153 1 1 4654 20110602153457
+82.103.235.141 0 1 60975 
+87.93.221.59 0 1 60975 
+66.220.158.250 0 1 60975 
+66.220.149.246 0 1 60975 
+2.201.222.111 1 7 40121 20110611121412
+94.22.101.60 0 1 60975 
+91.155.45.208 0 1 60975 
+91.156.167.141 0 1 60975 
+88.193.59.82 0 1 60975 
+69.63.181.250 0 1 60975 
+206.183.1.74 1 1 4654 20110627070442
+91.157.21.52 0 1 60975 
+84.230.244.166 0 1 60975 
+85.194.237.233 0 1 60975 
+85.77.63.208 0 1 60975 
+88.114.60.168 0 3 60975 
+46.132.169.200 0 1 60975 
+62.113.180.82 0 1 60975 
+84.250.197.93 0 1 60975 
+80.248.117.115 0 1 60975 
+77.105.87.113 0 1 60975 
+85.29.102.27 0 1 60975 
+66.220.149.245 0 1 60975 
+69.171.228.244 0 1 60975 
+69.63.189.249 0 1 60975 
+82.181.211.154 0 1 60975 
+67.202.19.207 1 1 4654 20110628174925
+84.250.5.6 0 2 121950 
+109.240.120.168 0 1 60975 
+85.76.198.132 0 1 60975 
+62.78.210.66 0 1 60975 
+178.75.138.191 0 1 60975 
+69.171.224.247 0 3 182925 
+88.112.16.9 0 1 60975 
+88.115.144.87 0 2 121950 
+80.246.150.172 0 1 60975 
+178.75.146.24 0 1 60975 
+193.167.222.193 0 3 121950 
+208.115.111.69 4 4 18616 20110614163231
+208.80.194.33 1 1 4654 20110604114341
+88.113.139.229 0 1 60975 
+84.248.85.133 0 1 60975 
+91.154.37.156 0 1 60975 
+69.171.228.245 0 2 121950 
+109.240.48.113 0 1 60975 
+88.114.63.190 0 3 121950 
+62.78.150.15 0 1 60975 
+38.100.21.18 1 2 7195 20110608205501
+82.141.122.174 0 2 121950 
+178.55.7.225 0 1 60975 
+87.93.79.95 0 1 60975 
+66.220.146.245 0 1 60975 
+83.148.247.248 0 1 60975 
+84.249.20.133 0 1 60975 
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 29
+20110601 0 10 609750 0
+20110602 12 25 787548 6
+20110603 14 42 1767802 6
+20110604 9 37 1566261 5
+20110605 14 26 735881 4
+20110606 8 20 710498 3
+20110607 14 15 121477 5
+20110608 23 28 353483 7
+20110609 11 13 173144 5
+20110610 12 29 386882 7
+20110611 18 33 337631 7
+20110612 18 24 449622 5
+20110613 24 25 168017 10
+20110614 27 52 1319650 11
+20110615 20 28 580880 7
+20110616 13 19 421698 6
+20110617 10 13 168490 4
+20110618 20 24 336980 8
+20110619 3 11 382353 3
+20110620 3 21 715500 3
+20110621 2 6 253208 2
+20110622 0 2 121950 0
+20110623 3 3 9308 3
+20110624 0 1 60975 0
+20110625 2 3 70283 2
+20110626 0 1 60975 0
+20110627 3 10 110404 3
+20110628 1 1 4654 1
+20110629 3 3 13962 3
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 4
+1h+ 1
+0s-30s 122
+2mn-5mn 2
+30mn-1h 1
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 1
+/ 287 1298466 126 126
+END_SIDER
