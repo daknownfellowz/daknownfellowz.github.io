@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName www.xtendedmusic.com
+AuthUserFile /home/virtual/site341/fst/etc/awstats/.passwd
+AuthGroupFile /dev/null
+Require valid-user

@@ -1,0 +1,365 @@
+AWSTATS DATA FILE 6.6 (build 1.887)
+# If you remove this file, all statistics for date 201104 will be lost/reset.
+
+# Position (offset in bytes) in this file of beginning of each section for
+# direct I/O access. If you made changes somewhere in this file, you should
+# also remove completely the MAP section (AWStats will rewrite it at next
+# update).
+BEGIN_MAP 27
+POS_GENERAL 1864                
+POS_TIME 2528                
+POS_VISITOR 7745                
+POS_DAY 9089                
+POS_DOMAIN 3222                
+POS_LOGIN 3450                
+POS_ROBOT 3605                
+POS_WORMS 4261                
+POS_EMAILSENDER 4392                
+POS_EMAILRECEIVER 4535                
+POS_SESSION 9677                
+POS_SIDER 9846                
+POS_FILETYPES 4670                
+POS_OS 4788                
+POS_BROWSER 4953                
+POS_SCREENSIZE 5218                
+POS_UNKNOWNREFERER 5292                
+POS_UNKNOWNREFERERBROWSER 5765                
+POS_ORIGIN 6005                
+POS_SEREFERRALS 6140                
+POS_PAGEREFS 6306                
+POS_SEARCHWORDS 6689                
+POS_KEYWORDS 6902                
+POS_MISC 2192                
+POS_ERRORS 7009                
+POS_CLUSTER 3306                
+POS_SIDER_404 7111                
+END_MAP
+
+# LastLine    = Date of last record processed - Last record line number in last log - Last record offset in last log - Last record signature value
+# FirstTime   = Date of first visit for history file
+# LastTime    = Date of last visit for history file
+# LastUpdate  = Date of last update - Nb of parsed records - Nb of parsed old records - Nb of parsed new records - Nb of parsed corrupted - Nb of parsed dropped
+# TotalVisits = Number of visits
+# TotalUnique = Number of unique visitors
+# MonthHostsKnown   = Number of hosts known
+# MonthHostsUnKnown = Number of hosts unknown
+BEGIN_GENERAL 8
+LastLine 20110501004008 19 3082 7966086178477
+FirstTime 0
+LastTime 20110430115541
+LastUpdate 20110501042813 19 0 18 0 0
+TotalVisits 60                  
+TotalUnique 33                  
+MonthHostsKnown 0                   
+MonthHostsUnknown 33                  
+END_GENERAL
+
+# Misc ID - Pages - Hits - Bandwidth
+BEGIN_MISC 10
+QuickTimeSupport 0 0 0
+JavaEnabled 0 0 0
+JavascriptDisabled 0 0 0
+PDFSupport 0 0 0
+WindowsMediaPlayerSupport 0 0 0
+AddToFavourites 0 0 0
+RealPlayerSupport 0 0 0
+TotalMisc 0 0 0
+DirectorSupport 0 0 0
+FlashSupport 0 0 0
+END_MISC
+
+# Hour - Pages - Hits - Bandwidth - Not viewed Pages - Not viewed Hits - Not viewed Bandwidth
+BEGIN_TIME 24
+0 5 11 54083 20 23 32250
+1 14 15 63043 16 16 31025
+2 2 2 9308 18 18 40238
+3 1 1 4654 21 22 47915
+4 0 0 0 4 4 871
+5 1 1 4654 5 5 5959
+6 1 1 4654 5 5 10233
+7 3 3 13962 10 12 16009
+8 0 0 0 14 16 28583
+9 2 2 9308 24 25 50060
+10 1 1 4654 24 25 41819
+11 7 9 33006 20 23 57239
+12 3 3 9308 14 17 33159
+13 7 13 68045 14 14 17401
+14 6 6 27924 17 17 26647
+15 3 9 49429 19 23 45415
+16 2 2 9308 15 17 19799
+17 10 10 37232 9 12 16388
+18 0 0 0 19 20 31947
+19 10 10 46540 9 11 22630
+20 3 3 13962 27 32 70610
+21 1 1 4654 22 22 32616
+22 4 16 89550 22 23 32840
+23 2 8 40121 24 26 65541
+END_TIME
+
+# Domain - Pages - Hits - Bandwidth
+# The 10 first Pages must be first (order not required for others)
+BEGIN_DOMAIN 1
+ip 88 127 597399
+END_DOMAIN
+
+# Cluster ID - Pages - Hits - Bandwidth
+BEGIN_CLUSTER 0
+END_CLUSTER
+
+# Login - Pages - Hits - Bandwidth - Last visit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_LOGIN 0
+END_LOGIN
+
+# Robot ID - Hits - Bandwidth - Last visit - Hits on robots.txt
+# The 10 first Hits must be first (order not required for others)
+BEGIN_ROBOT 16
+mj12bot 52 242008 20110430232713 0
+baiduspider 48 203065 20110430205713 0
+yandex 45 132144 20110430202145 0
+googlebot 9 11849 20110418150259 0
+slurp 6 21585 20110425113550 0
+\wbot[\/\-] 5 0 20110429144521 0
+voila 5 23270 20110429205122 0
+findlinks 4 18616 20110427140649 0
+spider 3 9308 20110429204903 0
+surveybot 3 13962 20110430173316 0
+custo 1 4654 20110415190003 0
+robot 1 4654 20110413180146 0
+netcraft 1 4654 20110428181740 0
+nutch 1 4654 20110418131600 0
+crawl 1 4654 20110412225820 0
+ichiro 1 4654 20110417231650 0
+END_ROBOT
+
+# Worm ID - Hits - Bandwidth - Last visit
+# The 5 first Hits must be first (order not required for others)
+BEGIN_WORMS 0
+END_WORMS
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first Hits must be first (order not required for others)
+BEGIN_EMAILSENDER 0
+END_EMAILSENDER
+
+# EMail - Hits - Bandwidth - Last visit
+# The 20 first hits must be first (order not required for others)
+BEGIN_EMAILRECEIVER 0
+END_EMAILRECEIVER
+
+# Files type - Hits - Bandwidth - Bandwidth without compression - Bandwidth after compression
+BEGIN_FILETYPES 4
+css 9 22869 0 0
+html 88 376974 0 0
+jpg 12 155424 0 0
+gif 18 42132 0 0
+END_FILETYPES
+
+# OS ID - Hits
+BEGIN_OS 13
+winxp 56
+winlong 10
+winnt 17
+win2000 2
+symbian 8
+win98 2
+linuxfedora 2
+macosx 2
+winme 3
+win95 1
+win2003 6
+wince 1
+Unknown 17
+END_OS
+
+# Browser ID - Hits
+BEGIN_BROWSER 18
+msie6.0 29
+opera 24
+firefox3.6.16 8
+msie5.5 3
+msie3.02 1
+firefox3.5.3 2
+firefox3.6.15 1
+netscape0.6 2
+nokia 8
+mozilla 3
+netscape0.91 1
+msie7.0 16
+msie2.0 1
+firefox3.6.3 1
+wget 1
+Unknown 4
+safari 21
+firefox3.6.13 1
+END_BROWSER
+
+# Screen size - Hits
+BEGIN_SCREENSIZE 0
+END_SCREENSIZE
+
+# Unknown referer OS - Last visit date
+BEGIN_UNKNOWNREFERER 8
+cmsworldmap.com 20110426173524
+Mozilla/0.91_Beta_(Windows) 20110417194111
+Opera/9.80_(J2ME/MIDP;_Opera_Mini/4.2.23546/24.746;_U;_en)_Presto/2.5.25_Version/10.54 20110413231913
+DomainWatcher_Bot 20110405000252
+- 20110418174229
+Mozilla/5.0_(compatible;_Ezooms/1.0;_ezooms.bot@gmail.com) 20110422073934
+Mozilla/0.6_Beta_(Windows) 20110425133436
+Wget/1.11.4_Red_Hat_modified 20110430011008
+END_UNKNOWNREFERER
+
+# Unknown referer Browser - Last visit date
+BEGIN_UNKNOWNREFERERBROWSER 4
+DomainWatcher_Bot 20110405000252
+- 20110418174229
+cmsworldmap.com 20110426173524
+Gimmie60/5.0_(Windows;_U;_Windows_NT_5.1;_en-US;_rv:1.9.1.11) 20110414013355
+END_UNKNOWNREFERERBROWSER
+
+# Origin - Pages - Hits 
+BEGIN_ORIGIN 6
+From0 50 50
+From1 0 0
+From2 4 4
+From3 31 31
+From4 3 42
+From5 0 0
+END_ORIGIN
+
+# Search engine referers ID - Pages - Hits
+BEGIN_SEREFERRALS 2
+google 3 3
+yandex 1 1
+END_SEREFERRALS
+
+# External page referers - Pages - Hits
+# The 10 first Pages must be first (order not required for others)
+BEGIN_PAGEREFS 6
+http://rubanke.ru/news.php 10 10
+http://rubanke.ru 5 5
+http://uastroyka.ru 5 5
+http://senauka.ru/news.php 5 5
+http://daklondes.narod2.ru/don-juan-moler-skachat.html 5 5
+http://www.midnightproductions.fi/content/view/25/46/lang,fi/ 1 1
+END_PAGEREFS
+
+# Search keyphrases - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_SEARCHWORDS 3
+xtendedmusic+productions 2
+xtendedmusic.com 1
+xtendedmusic 1
+END_SEARCHWORDS
+
+# Search keywords - Number of search
+# The 10 first number of search must be first (order not required for others)
+BEGIN_KEYWORDS 3
+xtendedmusic 3
+productions 2
+xtendedmusic.com 1
+END_KEYWORDS
+
+# Errors - Hits - Bandwidth
+BEGIN_ERRORS 2
+302 68 22626
+404 174 50837
+END_ERRORS
+
+# URL with 404 errors - Hits - Last URL referer
+BEGIN_SIDER_404 11
+/CHANGELOG.txt 1 -
+/pinkparty/pinkparty.jpg 1 -
+/phpmyadmin/scripts/setup.php 1 http://XTENDEDMUSIC.COM/phpmyadmin/scripts/setup.php
+/robots.txt 160 -
+/pinkparty/pinkparty.htm 5 -
+/umbraco/css/umbracoGui.css 1 -
+/wp-login.php 1 -
+/sitecore/login 1 -
+/news.htm 1 -
+/misc/tabledrag.js 1 -
+/GGTrack_TeaserFX_Final_001.divx 1 -
+END_SIDER_404
+
+# Host - Pages - Hits - Bandwidth - Last visit date - [Start date of last visit] - [Last page of last visit]
+# [Start date of last visit] and [Last page of last visit] are saved only if session is not finished
+# The 10 first Hits must be first (order not required for others)
+BEGIN_VISITOR 33
+193.106.136.58 30 30 139620 20110425133445
+208.80.194.29 10 10 46540 20110430013916
+174.129.117.237 7 7 0 20110425231257
+208.80.194.35 3 3 13962 20110430115541
+208.80.194.37 3 3 13962 20110421112857
+208.115.111.69 3 3 13962 20110422073934
+70.59.126.252 2 2 9308 20110418174229
+94.144.63.4 2 8 44775 20110402153934
+208.80.194.34 2 2 9308 20110421011833
+69.58.178.59 2 2 9308 20110413013408
+210.232.15.25 1 1 4654 20110414215705
+195.50.207.38 1 7 40121 20110426134610
+85.156.209.176 1 1 4654 20110423032351
+78.46.80.99 1 1 4654 20110408053237
+95.25.194.236 1 2 7195 20110402012025
+151.21.238.218 1 7 40121 20110420003654
+72.94.249.37 1 1 4654 20110416023636
+87.106.135.77 1 1 4654 20110430014427
+79.143.182.232 1 1 4654 20110417110646
+199.80.52.5 1 1 4654 20110407202046
+208.80.194.28 1 1 4654 20110407001919
+173.192.34.95 1 1 4654 20110401100417
+188.40.124.153 1 1 4654 20110426173524
+88.114.204.123 1 7 40121 20110410222633
+38.127.197.105 2 4 14390 20110422114011
+178.77.74.155 1 1 4654 20110405000252
+173.51.255.169 1 1 4654 20110414013355
+89.27.0.133 1 7 40121 20110419223804
+82.145.210.74 1 7 40121 20110413231912
+208.80.194.27 1 1 4654 20110425005654
+99.189.91.126 1 1 4654 20110430011008
+46.109.177.245 1 1 4654 20110420064320
+92.248.142.147 1 1 4654 20110422112113
+END_VISITOR
+
+# Date - Pages - Hits - Bandwidth - Visits
+BEGIN_DAY 26
+20110401 1 1 4654 1
+20110402 3 10 51970 2
+20110403 1 1 0 1
+20110404 1 1 4654 1
+20110405 1 1 4654 1
+20110406 2 2 4654 2
+20110407 2 2 9308 2
+20110408 2 2 9308 2
+20110409 1 1 0 1
+20110410 2 8 44775 2
+20110412 2 2 9308 2
+20110413 5 11 54083 4
+20110414 7 7 32578 3
+20110416 1 1 4654 1
+20110417 8 8 37232 4
+20110418 8 8 37232 3
+20110419 3 9 44775 3
+20110420 7 13 68045 3
+20110421 2 2 9308 2
+20110422 6 8 28352 5
+20110423 6 6 27924 2
+20110424 1 1 4654 1
+20110425 7 7 27924 3
+20110426 4 10 54083 4
+20110428 1 1 4654 1
+20110430 4 4 18616 4
+END_DAY
+
+# Session range - Number of visits
+BEGIN_SESSION 3
+15mn-30mn 1
+30s-2mn 1
+0s-30s 58
+END_SESSION
+
+# URL - Pages - Bandwidth - Entry - Exit
+# The 10 first Pages must be first (order not required for others)
+BEGIN_SIDER 1
+/ 88 376974 60 60
+END_SIDER
