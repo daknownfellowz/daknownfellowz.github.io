@@ -144,7 +144,21 @@ a:focus, a:hover {
   padding: 200px 0;
   text-align: center;
   color: white;
-  background: url("../img/AdobeStock_53911056.jpeg") no-repeat bottom center scroll;
+  /*background: url("../img/AdobeStock_53911056.jpeg") no-repeat bottom center scroll;*/
+  
+  /* Punainen layeri päälle - teksti näkyy */
+  background: 
+    /* top, transparent red */
+    linear-gradient(
+	  rgba(0, 0, 0, 0.5),
+	  rgba(0, 0, 0, 0)
+      /*rgba(255, 0, 0, 0.45), 
+      rgba(255, 0, 0, 0.45)*/
+    ),
+    /* your image */
+    url("../img/AdobeStock_53911056.jpeg") no-repeat center center scroll;  
+  
+  
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
